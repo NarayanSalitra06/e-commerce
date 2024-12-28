@@ -6,7 +6,6 @@ function App() {
   return (
     // <ProductGrid itemsPerPage={10} totalItems={100} />
     <>
-      {" "}
       <Navbar></Navbar>
     </>
   );
