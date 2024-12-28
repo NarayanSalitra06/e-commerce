@@ -1,32 +1,37 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ProductCard } from '../common/ProductCard';
-import type { ThemeColors, ProductGridProps, ProductVariant,ProductCardProps } from '../../types/types';
+import React, { useState, useEffect, useRef } from "react";
+import { ProductCard } from "../common/ProductCard";
+import type {
+  ThemeColors,
+  ProductGridProps,
+  ProductVariant,
+  ProductCardProps,
+} from "../../types/types";
 
-const defaultThemes:ThemeColors[] = [
+const defaultThemes: ThemeColors[] = [
   {
-    primary: 'bg-blue-500',
-    secondary: 'bg-gray-100',
-    textColor: 'text-gray-900',
-    borderColor: 'ring-blue-500',
-    hoverColor: 'hover:bg-gray-100'
+    primary: "bg-blue-500",
+    secondary: "bg-gray-100",
+    textColor: "text-gray-900",
+    borderColor: "ring-blue-500",
+    hoverColor: "hover:bg-gray-100",
   },
   {
-    primary: 'bg-green-500',
-    secondary: 'bg-green-100',
-    textColor: 'text-green-900',
-    borderColor: 'ring-green-500',
-    hoverColor: 'hover:bg-green-50'
+    primary: "bg-green-500",
+    secondary: "bg-green-100",
+    textColor: "text-green-900",
+    borderColor: "ring-green-500",
+    hoverColor: "hover:bg-green-50",
   },
   {
-    primary: 'bg-purple-500',
-    secondary: 'bg-purple-100',
-    textColor: 'text-purple-900',
-    borderColor: 'ring-purple-500',
-    hoverColor: 'hover:bg-purple-50'
-  }
+    primary: "bg-purple-500",
+    secondary: "bg-purple-100",
+    textColor: "text-purple-900",
+    borderColor: "ring-purple-500",
+    hoverColor: "hover:bg-purple-50",
+  },
 ];
 
-const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
+const defaultProductProps: Omit<ProductCardProps, "theme"> = {
   title: "Amplify Athletic Wear",
   price: 89.99,
   compareAtPrice: 129.99,
@@ -41,20 +46,20 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
       image: {
         id: "Regio-main",
         url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio1.jpg?v=1709597183",
-        alt: "Blue Amplify Athletic Wear - Main View"
+        alt: "Blue Amplify Athletic Wear - Main View",
       },
       images: [
         {
           id: "Regio-1",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio2.jpg?v=1709597183",
-          alt: "Blue Amplify Athletic Wear - Front View"
+          alt: "Blue Amplify Athletic Wear - Front View",
         },
         {
           id: "regio-2",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio2.jpg?v=1709597183",
-          alt: "Blue Amplify Athletic Wear - Back View"
-        }
-      ]
+          alt: "Blue Amplify Athletic Wear - Back View",
+        },
+      ],
     },
     {
       id: "black-variant",
@@ -66,21 +71,22 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
       image: {
         id: "black-main",
         url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraGliese32.jpg?v=1714505295",
-        alt: "Black Amplify Athletic Wear - Main View"
+        alt: "Black Amplify Athletic Wear - Main View",
       },
       images: [
         {
           id: "black-1",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraWhite3.jpg?v=1709597316",
-          alt: "Black Amplify Athletic Wear - Front View"
+          alt: "Black Amplify Athletic Wear - Front View",
         },
         {
           id: "black-2",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraWhite1.jpg?v=1709597315",
-          alt: "Black Amplify Athletic Wear - Back View"
-        }
-      ]
-    }, {
+          alt: "Black Amplify Athletic Wear - Back View",
+        },
+      ],
+    },
+    {
       id: "blue-variant",
       color: "Blue",
       colorCode: "#0052CC",
@@ -90,20 +96,20 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
       image: {
         id: "Regio-main",
         url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio1.jpg?v=1709597183",
-        alt: "Blue Amplify Athletic Wear - Main View"
+        alt: "Blue Amplify Athletic Wear - Main View",
       },
       images: [
         {
           id: "Regio-1",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio2.jpg?v=1709597183",
-          alt: "Blue Amplify Athletic Wear - Front View"
+          alt: "Blue Amplify Athletic Wear - Front View",
         },
         {
           id: "regio-2",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio2.jpg?v=1709597183",
-          alt: "Blue Amplify Athletic Wear - Back View"
-        }
-      ]
+          alt: "Blue Amplify Athletic Wear - Back View",
+        },
+      ],
     },
     {
       id: "black-variant2",
@@ -115,21 +121,22 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
       image: {
         id: "black-main",
         url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraGliese32.jpg?v=1714505295",
-        alt: "Black Amplify Athletic Wear - Main View"
+        alt: "Black Amplify Athletic Wear - Main View",
       },
       images: [
         {
           id: "black-1",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraWhite3.jpg?v=1709597316",
-          alt: "Black Amplify Athletic Wear - Front View"
+          alt: "Black Amplify Athletic Wear - Front View",
         },
         {
           id: "black-2",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraWhite1.jpg?v=1709597315",
-          alt: "Black Amplify Athletic Wear - Back View"
-        }
-      ]
-    }, {
+          alt: "Black Amplify Athletic Wear - Back View",
+        },
+      ],
+    },
+    {
       id: "blue-variant3",
       color: "Blue",
       colorCode: "#0052CC",
@@ -139,20 +146,20 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
       image: {
         id: "Regio-main",
         url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio1.jpg?v=1709597183",
-        alt: "Blue Amplify Athletic Wear - Main View"
+        alt: "Blue Amplify Athletic Wear - Main View",
       },
       images: [
         {
           id: "Regio-1",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio2.jpg?v=1709597183",
-          alt: "Blue Amplify Athletic Wear - Front View"
+          alt: "Blue Amplify Athletic Wear - Front View",
         },
         {
           id: "regio-2",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraRegio2.jpg?v=1709597183",
-          alt: "Blue Amplify Athletic Wear - Back View"
-        }
-      ]
+          alt: "Blue Amplify Athletic Wear - Back View",
+        },
+      ],
     },
     {
       id: "black-variant4",
@@ -164,21 +171,21 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
       image: {
         id: "black-main",
         url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraGliese32.jpg?v=1714505295",
-        alt: "Black Amplify Athletic Wear - Main View"
+        alt: "Black Amplify Athletic Wear - Main View",
       },
       images: [
         {
           id: "black-1",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraWhite3.jpg?v=1709597316",
-          alt: "Black Amplify Athletic Wear - Front View"
+          alt: "Black Amplify Athletic Wear - Front View",
         },
         {
           id: "black-2",
           url: "https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyCassioBraWhite1.jpg?v=1709597315",
-          alt: "Black Amplify Athletic Wear - Back View"
-        }
-      ]
-    }
+          alt: "Black Amplify Athletic Wear - Back View",
+        },
+      ],
+    },
   ] as ProductVariant[],
   sizes: [
     { id: "xs", label: "XS", available: true },
@@ -186,18 +193,22 @@ const defaultProductProps: Omit<ProductCardProps, 'theme'> = {
     { id: "m", label: "M", available: false },
     { id: "l", label: "L", available: true },
     { id: "xl", label: "XL", available: true },
-    { id: "2xl", label: "2XL", available: true }
+    { id: "2xl", label: "2XL", available: true },
   ],
-  onVariantSelect: (variantId: string) => console.log('Variant selected:', variantId),
-  onSizeSelect: (sizeId: string) => console.log('Size selected:', sizeId),
-  onAddToCart: (variantId: string, sizeId: string) => console.log('Adding to cart:', { variantId, sizeId })
+  onVariantSelect: (variantId: string) =>
+    console.log("Variant selected:", variantId),
+  onSizeSelect: (sizeId: string) => console.log("Size selected:", sizeId),
+  onAddToCart: (variantId: string, sizeId: string) =>
+    console.log("Adding to cart:", { variantId, sizeId }),
 };
 
 export const ProductGrid: React.FC<ProductGridProps> = ({
   itemsPerPage = 10,
-  totalItems = 100
+  totalItems = 100,
 }) => {
-  const [items, setItems] = useState<(ProductCardProps & { key: number })[]>([]);
+  const [items, setItems] = useState<(ProductCardProps & { key: number })[]>(
+    []
+  );
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -208,18 +219,18 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
       ...defaultProductProps,
       key: startIndex + index,
       theme: defaultThemes[Math.floor(Math.random() * defaultThemes.length)],
-      title: `${defaultProductProps.title} ${startIndex + index + 1}`
+      title: `${defaultProductProps.title} ${startIndex + index + 1}`,
     }));
   };
 
   const loadMoreItems = () => {
     if (loading || items.length >= totalItems) return;
-    
+
     setLoading(true);
     const newItems = generateItems(items.length, itemsPerPage);
-    
+
     setTimeout(() => {
-      setItems(prev => [...prev, ...newItems]);
+      setItems((prev) => [...prev, ...newItems]);
       setHasMore(items.length + itemsPerPage < totalItems);
       setLoading(false);
     }, 500);
@@ -228,8 +239,8 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '20px',
-      threshold: 0.1
+      rootMargin: "20px",
+      threshold: 0.1,
     };
 
     observer.current = new IntersectionObserver((entries) => {
@@ -256,8 +267,10 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   return (
     <div className="min-h-screen bg-black  p-6">
       <div className="container mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Product Catalog</h1>
-        
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Product Catalog
+        </h1>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {items.map((item, index) => (
             <div
@@ -269,13 +282,13 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
             </div>
           ))}
         </div>
-        
+
         {loading && (
           <div className="flex justify-center mt-8">
             <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
-        
+
         {!hasMore && (
           <div className="text-center text-gray-600 mt-8">
             No more products to load
