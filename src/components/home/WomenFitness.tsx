@@ -1,49 +1,53 @@
 import React from "react";
 import type { womenFitness } from "../../types/types";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import SwiperSlider from "./SwiperSlider";
 
+// Your data array
 const womenFitnessdata: womenFitness[] = [
   {
     image: "/womenpopular/img1.webp",
     text: "BRA",
   },
   {
-    image: "/womenpopular/img1.webp",
+    image: "/womenpopular/shorts2.webp",
     text: "SPORTS",
   },
   {
-    image: "/womenpopular/img1.webp",
+    image: "/womenpopular/legging2.webp",
     text: "LEGGINGS",
   },
   {
-    image: "/womenpopular/img1.webp",
-    text: "HODDIES",
+    image: "/womenpopular/hoodies.webp",
+    text: "HOODIES",
   },
   {
-    image: "/womenpopular/img1.webp",
+    image: "/womenpopular/shirts.webp",
     text: "SHIRTS",
   },
   {
-    image: "/womenpopular/img1.webp",
+    image: "/womenpopular/sweatpants.webp",
     text: "SWEATPANTS",
   },
 ];
 
 const WomenFitness: React.FC = () => {
+  // Slider settings
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3.5,
+    slidesToScroll: 1,
+    draggable: true,
+  };
+
   return (
-    <div>
-      <div className=" flex justify-center items-center">
-        {womenFitnessdata.map((item, index) => (
-          <div className="mx-1 ">
-            {" "}
-            <div className=" ">
-              <img src={item.image} alt="image" className="h-[30vw] w-[40vw]" />
-            </div>
-            <div>
-              <p>{item.text}</p>
-              <button> Shop Now</button>
-            </div>
-          </div>
-        ))}
+    <div className="w-full  py-8">
+      <div className="">
+        <SwiperSlider />
       </div>
     </div>
   );

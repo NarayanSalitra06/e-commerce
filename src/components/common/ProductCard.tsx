@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { cn } from '../../utils/utils';
-import { useHover } from '../../hooks/useHover';
-import { useSlider } from '../../hooks/useSlider';
-import type { ProductCardProps } from '../../types/types';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { cn } from "../../utils/utils";
+import { useHover } from "../../hooks/useHover";
+import { useSlider } from "../../hooks/useSlider";
+import type { ProductCardProps } from "../../types/types";
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   title,
@@ -13,11 +13,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   sizes,
   className,
   theme = {
-    primary: 'bg-blue-500',
-    secondary: 'bg-gray-100',
-    textColor: 'text-gray-900',
-    borderColor: 'ring-blue-500',
-    hoverColor: 'hover:bg-gray-100'
+    primary: "bg-blue-500",
+    secondary: "bg-gray-100",
+    textColor: "text-gray-900",
+    borderColor: "ring-blue-500",
+    hoverColor: "hover:bg-gray-100",
   },
   onVariantSelect,
   onSizeSelect,
@@ -40,9 +40,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const currentImages = currentVariant.images;
 
   // Handlers
-  const handleImageNavigation = (direction: 'prev' | 'next') => {
-    setCurrentImageIndex(prev => {
-      if (direction === 'next') {
+  const handleImageNavigation = (direction: "prev" | "next") => {
+    setCurrentImageIndex((prev) => {
+      if (direction === "next") {
         return (prev + 1) % currentImages.length;
       }
       return (prev - 1 + currentImages.length) % currentImages.length;
@@ -70,7 +70,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const handleMouseEnter = () => {
     if (!hasAutoSlided && currentImages.length > 1) {
       setTimeout(() => {
-        setCurrentImageIndex(prev => (prev + 1) % currentImages.length);
+        setCurrentImageIndex((prev) => (prev + 1) % currentImages.length);
         setHasAutoSlided(true);
       }, 300);
     }
@@ -78,10 +78,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   if (loading) {
     return (
-      <div className={cn(
-        "w-full max-w-xs bg-white rounded-lg shadow-lg overflow-hidden animate-pulse",
-        className
-      )}>
+      <div
+        className={cn(
+          "w-full max-w-xs bg-white rounded-lg shadow-lg overflow-hidden animate-pulse",
+          className
+        )}
+      >
         <div className="h-72 bg-gray-200" />
         <div className="p-4 space-y-3">
           <div className="h-4 bg-gray-200 rounded w-2/3" />
@@ -92,52 +94,54 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   }
 
   return (
-    <div className={cn(
-      "w-full max-w-xs bg-white rounded-lg shadow-lg overflow-hidden",
-      className
-    )}>
+    <div
+      className={cn(
+        "w-full max-w-xs bg-white rounded-lg shadow-lg overflow-hidden",
+        className
+      )}
+    >
       {/* Main Image */}
-     <div 
-  className="relative h-72 group"
-  onMouseEnter={() => {
-    if (currentImages.length > 1) {
-      setCurrentImageIndex((prev) => (prev + 1) % currentImages.length);
-    }
-  }}
-  onMouseLeave={() => {
-    setCurrentImageIndex(0); // Revert to the first image
-  }}
->
-  <img
-    src={currentImages[currentImageIndex].url}
-    alt={currentImages[currentImageIndex].alt}
-    className="w-full h-full object-cover"
-    loading="lazy"
-  />
+      <div
+        className="relative h-72 group"
+        onMouseEnter={() => {
+          if (currentImages.length > 1) {
+            setCurrentImageIndex((prev) => (prev + 1) % currentImages.length);
+          }
+        }}
+        onMouseLeave={() => {
+          setCurrentImageIndex(0); // Revert to the first image
+        }}
+      >
+        <img
+          src={currentImages[currentImageIndex].url}
+          alt={currentImages[currentImageIndex].alt}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
 
         {/* Image Navigation */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="absolute inset-0 bg-black/5" />
-          
+
           {!showSizes && (
             <>
               <button
-                onClick={() => handleImageNavigation('prev')}
+                onClick={() => handleImageNavigation("prev")}
                 className={cn(
-                    "absolute left-4 bottom-24 p-2 bg-white rounded-full shadow-md transition-colors",
-                    theme.hoverColor
-                  )}
+                  "absolute left-4 bottom-24 p-2 bg-white rounded-full shadow-md transition-colors",
+                  theme.hoverColor
+                )}
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              
+
               <button
-                onClick={() => handleImageNavigation('next')}
+                onClick={() => handleImageNavigation("next")}
                 className={cn(
-                    "absolute right-4 bottom-24 p-2 bg-white rounded-full shadow-md transition-colors",
-                    theme.hoverColor
-                  )}
+                  "absolute right-4 bottom-24 p-2 bg-white rounded-full shadow-md transition-colors",
+                  theme.hoverColor
+                )}
                 aria-label="Next image"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -151,7 +155,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     onClick={() => setCurrentImageIndex(index)}
                     className={cn(
                       "w-2 h-2 rounded-full transition-colors",
-                      currentImageIndex === index ? 'bg-white' : 'bg-white/50'
+                      currentImageIndex === index ? "bg-white" : "bg-white/50"
                     )}
                     aria-label={`Go to image ${index + 1}`}
                   />
@@ -161,14 +165,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           )}
 
           {/* Quick Add */}
-          <div 
+          <div
             className="absolute bottom-4 left-1/2 -translate-x-1/2 w-64"
-            onMouseEnter={()=>setTimeout(()=>setShowSizes(true),300) }
+            onMouseEnter={() => setTimeout(() => setShowSizes(true), 300)}
             onMouseLeave={() => setShowSizes(false)}
           >
             {showSizes ? (
               <div className="bg-white rounded-lg shadow-xl p-4">
-                  <h3 className={cn("text-center font-medium mb-3", theme.textColor)}>Select Size</h3>
+                <h3
+                  className={cn(
+                    "text-center font-medium mb-3",
+                    theme.textColor
+                  )}
+                >
+                  Select Size
+                </h3>
                 <div className="grid grid-cols-3 gap-2">
                   {sizes.map((size) => (
                     <button
@@ -179,7 +190,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                         "px-3 py-2 rounded text-sm font-medium transition-colors",
                         selectedSize === size.id
                           ? cn(theme.primary, "text-white")
-                          : cn(theme.secondary, theme.hoverColor, theme.textColor),
+                          : cn(
+                              theme.secondary,
+                              theme.hoverColor,
+                              theme.textColor
+                            ),
                         !size.available && "opacity-50 cursor-not-allowed"
                       )}
                     >
@@ -191,20 +206,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   <button
                     onClick={handleAddToCart}
                     className={cn(
-                        "w-full mt-3 px-4 py-2 text-white rounded-md transition-colors",
-                        theme.primary,
-                        theme.hoverColor
-                      )}
+                      "w-full mt-3 px-4 py-2 text-white rounded-md transition-colors",
+                      theme.primary,
+                      theme.hoverColor
+                    )}
                   >
                     Add to Cart
                   </button>
                 )}
               </div>
             ) : (
-                <button className={cn(
-                    "w-full px-4 py-2 bg-white rounded-lg shadow-md flex items-center justify-center gap-2 transition-colors",
-                    theme.hoverColor
-                  )}>
+              <button
+                className={cn(
+                  "w-full px-4 py-2 bg-white rounded-lg shadow-md flex items-center justify-center gap-2 transition-colors",
+                  theme.hoverColor
+                )}
+              >
                 Quick Add
                 <span className="text-lg">+</span>
               </button>
@@ -217,10 +234,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       <div className="relative bg-black p-4">
         <div {...hoverProps}>
           {/* Product Info */}
-          <div className={cn(
-            "transition-opacity duration-300",
-            showVariants ? 'opacity-0' : 'opacity-100'
-          )}>
+          <div
+            className={cn(
+              "transition-opacity duration-300",
+              showVariants ? "opacity-0" : "opacity-100"
+            )}
+          >
             <h3 className={cn("font-medium", theme.textColor)}>{title}</h3>
             <div className="mt-1 flex items-center gap-2">
               <span className="font-medium">
@@ -235,17 +254,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </div>
 
           {/* Variant Selector */}
-          <div className={cn(
-            "absolute inset-x-0 top-0 transition-opacity duration-300",
-            showVariants ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          )}>
+          <div
+            className={cn(
+              "absolute inset-x-0 top-0 transition-opacity duration-300",
+              showVariants ? "opacity-100" : "opacity-0 pointer-events-none"
+            )}
+          >
             <div className="relative px-6">
               <button
-                onClick={() => handleVariantScroll('left')}
+                onClick={() => handleVariantScroll("left")}
                 className={cn(
-                    "absolute left-0 top-1/2 -translate-y-1/2 p-1 bg-white rounded-full shadow-md z-10 transition-colors",
-                    theme.hoverColor
-                  )}
+                  "absolute left-0 top-1/2 -translate-y-1/2 p-1 bg-white rounded-full shadow-md z-10 transition-colors",
+                  theme.hoverColor
+                )}
                 aria-label="Scroll variants left"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -261,10 +282,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     onClick={() => handleVariantSelect(index)}
                     disabled={!variant.available}
                     className={cn(
-                        "flex-shrink-0 relative w-14 h-14 rounded-lg overflow-hidden transition-all",
-                        selectedVariant === index ? `ring-2 ${theme.borderColor} ring-offset-1` : "",
-                        !variant.available && "opacity-50 cursor-not-allowed"
-                      )}
+                      "flex-shrink-0 relative w-14 h-14 rounded-lg overflow-hidden transition-all",
+                      selectedVariant === index
+                        ? `ring-2 ${theme.borderColor} ring-offset-1`
+                        : "",
+                      !variant.available && "opacity-50 cursor-not-allowed"
+                    )}
                     aria-label={`Select ${variant.color} variant`}
                   >
                     <img
@@ -281,7 +304,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               </div>
 
               <button
-                onClick={() => handleVariantScroll('right')}
+                onClick={() => handleVariantScroll("right")}
                 className={cn(
                   "absolute right-0 top-1/2 -translate-y-1/2 p-1 bg-white rounded-full shadow-md z-10 transition-colors",
                   theme.hoverColor
