@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-wrapper-object-types */
+
 import React, { useState, useEffect } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 import PopUp from "./PopUp";
-import Heading from "../home/Heading";
+// import Heading from "../home/Heading";
 
 // Define SubCategory, CategoryWithAd, and CombinedCategories types
 interface SubCategory {
@@ -148,7 +150,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white fixed w-full top-0 z-50">
       <div className="flex sm:justify-between justify-center items-center">
         <h1>Free domestic shipping over $150 and 30-day return</h1>
         <div

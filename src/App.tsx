@@ -1,16 +1,15 @@
-import { ProductGrid } from "./components/features/ProductGrid";
-import WomenFitness from "./components/home/WomenFitness";
-import Navbar from "./components/Navbar/Navbar";
-import PopUp from "./components/Navbar/PopUp";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Route, Routes } from "react-router-dom";
+import Landing from "./components/layout/Landing";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    // <ProductGrid itemsPerPage={10} totalItems={100} />
     <>
-      {" "}
-      <WomenFitness></WomenFitness>
+      <Routes>
+        <Route path="/" element={<Landing />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
     </>
   );
 }

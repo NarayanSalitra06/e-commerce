@@ -203,8 +203,8 @@ const defaultProductProps: Omit<ProductCardProps, "theme"> = {
 };
 
 export const ProductGrid: React.FC<ProductGridProps> = ({
-  itemsPerPage = 10,
-  totalItems = 100,
+  itemsPerPage = 8,
+  totalItems = 8,
 }) => {
   const [items, setItems] = useState<(ProductCardProps & { key: number })[]>(
     []
