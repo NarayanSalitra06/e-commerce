@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-wrapper-object-types */
+
 import React, { useState, useEffect } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 import PopUp from "./PopUp";
-import Heading from "../home/Heading";
+// import Heading from "../home/Heading";
 
 // Define SubCategory, CategoryWithAd, and CombinedCategories types
 interface SubCategory {
