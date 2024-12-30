@@ -65,6 +65,26 @@ export interface womenFitness{
   text?:string,
 }
 
+export interface VideoComponentProps {
+  videoSrc: string; 
+  subHeading: string;
+  buttonText: string;
+  // buttonUrl: string;
+}
+
+export interface HeadingProps {
+  upperText: string;
+  lowerText: string;
+  upperStyle:string;
+  lowerStyle:string;
+}
+
+export interface ButtonProps {
+  text: string; 
+  navigateTo: string; 
+  buttonStyle?: string; 
+  isExternal?: boolean;
+}
 // interface SubCategory {
 //   name: string;
 //   count: number | null;

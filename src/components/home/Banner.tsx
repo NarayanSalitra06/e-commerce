@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import Heading from "./Heading";
+import Button from "../common/Button";
 
 const Banner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Slideshow items
   const items = [
@@ -17,14 +19,14 @@ const Banner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [items.length]);
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
-  };
+  // const handleNavigation = (path: string) => {
+  //   navigate(path);
+  // };
 
   return (
     <div className="relative h-screen overflow-hidden z-0">
@@ -64,42 +66,31 @@ const Banner: React.FC = () => {
       </div>
 
       {/* Heading and Buttons */}
-      {/* <div className="absolute bottom-16 left-8 z-20 text-white">
-        <h1 className="text-5xl font-bold mb-4">NEW ARRIVALS</h1>
-        <div className="flex gap-4">
-          <button
-            onClick={() => handleNavigation("/shop-women")}
-            className="bg-white text-black py-2 px-4 rounded-lg shadow-lg hover:bg-gray-200"
-          >
-            Shop Women
-          </button>
-          <button
-            onClick={() => handleNavigation("/shop-men")}
-            className="bg-white text-black py-2 px-4 rounded-lg shadow-lg hover:bg-gray-200"
-          >
-            Shop Men
-          </button>
-        </div>
-      </div> */}
-
+  
       <div className="absolute bottom-16 left-8 z-20 text-white">
-        <h1 className="text-5xl font-bold mb-4 leading-none">
-          <span className="block">NEW</span>
-          <span className="block">ARRIVALS</span>
-        </h1>
-        <div className="flex gap-4">
-          <button
-            onClick={() => handleNavigation("/shop-women")}
-            className="bg-white text-black py-2 px-4 rounded-lg shadow-lg hover:bg-gray-200"
-          >
-            Shop Women
-          </button>
-          <button
-            onClick={() => handleNavigation("/shop-men")}
-            className="bg-white text-black py-2 px-4 rounded-lg shadow-lg hover:bg-gray-200"
-          >
-            Shop Men
-          </button>
+        
+        <p className="leading-none">
+         <Heading
+           upperText="NEW"
+           lowerText="ARRIVALS"
+           upperStyle="text-30px-vw font-syncopate font-bold text-[#ffffff]"
+           lowerStyle="text-[1.56vw] font-syncopate font-bold text-[#ffffff]"
+      />
+        </p>
+        <div className="flex gap-4 leading-3">
+      
+          <Button
+                  text="Shop Women"
+                  navigateTo="/shop-women"
+                  buttonStyle="bg-white text-[#000000] text-13px-vw font-inter px-6 py-3"
+    
+                />
+
+          <Button
+                  text="Shop Men"
+                  navigateTo="/shop-men"
+                  buttonStyle="bg-white text-[#000000] text-[13px] font-inter px-6 py-3"
+                />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import type { womenFitness } from "../../types/types";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SwiperSlider from "./SwiperSlider";
@@ -35,6 +36,7 @@ const womenFitnessdata: womenFitness[] = [
 
 const WomenFitness: React.FC = () => {
   // Slider settings
+  // eslint-disable-next-line no-var
   var settings = {
     dots: false,
     infinite: true,
@@ -45,7 +47,7 @@ const WomenFitness: React.FC = () => {
   };
 
   return (
-    <div className="w-full  py-8">
+    <div className="w-full  py-4">
       <div className="">
         <SwiperSlider />
       </div>

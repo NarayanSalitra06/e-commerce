@@ -59,7 +59,7 @@ const PopUp: React.FC<{ categories: Categories }> = ({ categories }) => {
       </div>
       <div className="w-[50%] h-[28vw]">
         <img
-          src={hoveredImage || "/header/men/img2webp"}
+          src={hoveredImage || "/header/men/img2.webp"}
           alt="Category Preview"
           className="w-full h-full object-cover"
         />
