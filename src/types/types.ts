@@ -64,14 +64,28 @@ export interface womenFitness{
   image?:string,
   text?:string,
 }
+export interface womenFitnessObject{
+  data?:womenFitness[]
+}
 
-// interface SubCategory {
-//   name: string;
-//   count: number | null;
-// }
-
-// export interface Categories {
-//   featured: SubCategory[];
-//   clothing: SubCategory[];
-//   activity: SubCategory[];
-// }
+export interface SubCategory {
+  name: string;
+  count: number | null;
+  adImage?: string; // Optional ad image for subcategories
+}
+export interface CategoryWithAd {
+  adImage?: string; // Optional ad image for categories
+  items: SubCategory[];
+}
+export type Categories = {
+  featured?: SubCategory[] | CategoryWithAd;
+  clothing?: SubCategory[] | CategoryWithAd;
+  activity?: SubCategory[] | CategoryWithAd;
+};
+export type Categories2 = {
+  featured?: SubCategory[] | CategoryWithAd;
+  clothing?: SubCategory[] | CategoryWithAd;
+  activity?: SubCategory[] | CategoryWithAd;
+  sportsBras?: CategoryWithAd | CategoryWithAd;
+  leggings?: CategoryWithAd | CategoryWithAd;
+};

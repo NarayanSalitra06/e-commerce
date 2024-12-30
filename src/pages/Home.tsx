@@ -3,14 +3,16 @@ import Banner from "../components/home/Banner";
 import WomenFitness from "../components/home/WomenFitness";
 import { ProductGrid } from "../components/features/ProductGrid";
 import VideoComponent from "../components/home/VideoComponent";
+import SwiperSlider from "../components/home/SwiperSlider";
+import { menFitnessdata, womenFitnessdata } from "../data/Header";
 
 const Home: React.FC = () => {
   return (
     <div>
       <Banner />
-      <WomenFitness />
+      <SwiperSlider data={womenFitnessdata} />
       <ProductGrid />
-      <WomenFitness />
+      <SwiperSlider data={menFitnessdata} />
       <VideoComponent
         videoSrc="/home/video.mp4"
         heading="VISIT ALPHALAND"

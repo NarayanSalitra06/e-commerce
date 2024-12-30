@@ -5,67 +5,58 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import type { womenFitness } from "../../types/types";
+import { womenFitnessObject } from "../../types/types";
 
 // Import required modules
 // import { Pagination } from "swiper/modules";
 
-const SwiperSlider: React.FC = () => {
-  const womenFitnessdata: womenFitness[] = [
-    {
-      image: "/womenpopular/img1.webp",
-      text: "BRA",
-    },
-    {
-      image: "/womenpopular/shorts2.webp",
-      text: "SPORTS",
-    },
-    {
-      image: "/womenpopular/legging2.webp",
-      text: "LEGGINGS",
-    },
-    {
-      image: "/womenpopular/hoodies.webp",
-      text: "HOODIES",
-    },
-    {
-      image: "/womenpopular/shirts.webp",
-      text: "SHIRTS",
-    },
-    {
-      image: "/womenpopular/sweatpants.webp",
-      text: "SWEATPANTS",
-    },
-  ];
+const SwiperSlider: React.FC<womenFitnessObject> = ({ data }) => {
+  console.log("SwiperSlider data:", data); // Debugging log
   return (
     <>
-      <Swiper
-        slidesPerView={3.5}
-        spaceBetween={15}
-        pagination={{
-          clickable: true,
-        }}
-        // modules={[Pagination]}
-        className="mySwiper"
-      >
-        {womenFitnessdata?.map((item, index) => (
-          <SwiperSlide key={index} className="overflow-hidden relative">
-            <img
-              className="transition-all duration-1000 hover:scale-105"
-              src={item?.image}
-              alt=""
-            />
-            <div className="text-center absolute bottom-[3vw] left-[3vw] z-30">
-              <p className="font-semibold text-[27px] font-syncopate text-stone-50">
-                {item.text}
-              </p>
-              <button className="mt-2 bg-white text-black font-semibold px-6 py-2 rounded-[3vh]">
-                Shop Now
-              </button>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="w-full  py-8">
+        <Swiper
+          spaceBetween={15}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            // When the viewport is 640px or less
+            500: {
+              slidesPerView: 2, // For larger screens
+            },
+            // Default for smaller screens
+            0: {
+              slidesPerView: 1.2, // For smaller screens
+            },
+            950: {
+              slidesPerView: 2.5, // For larger screens
+            },
+            1200: {
+              slidesPerView: 3.5, // For larger screens
+            },
+          }}
+          className="mySwiper"
+        >
+          {data?.map((item, index) => (
+            <SwiperSlide key={index} className="overflow-hidden relative ">
+              <img
+                className="transition-all duration-1000 hover:scale-105 h-[60vh] lg:h-[70vh] w-[100vw] "
+                src={item?.image}
+                alt=""
+              />
+              <div className="text-center absolute bottom-[5vw]  md:bottom-[3vw] left-[3vw] z-30">
+                <p className="font-semibold text-[27px] font-syncopate text-stone-50">
+                  {item.text}
+                </p>
+                <button className="mt-2 bg-white text-black font-semibold px-6 py-2 rounded-[3vh]">
+                  Shop Now
+                </button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 };
