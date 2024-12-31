@@ -3,80 +3,75 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import Heading from "./Heading";
 import Button from "../common/Button";
+import { items } from "../../data/Banner";
 
 const Banner: React.FC = () => {
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // // const navigate = useNavigate();
+
+  // // Change slides every 5 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  //   }, 4000);
+
+  //   return () => clearInterval(interval);
+  // }, [items.length]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const navigate = useNavigate();
 
-  // Slideshow items
-  const items = [
-    { type: "image", src: "/home/img1.webp" },
-    { type: "video", src: "/home/videobanner.mp4" },
-    { type: "image", src: "/home/img2.webp" },
-  ];
-
-  // Change slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [items.length]);
-
-  // const handleNavigation = (path: string) => {
-  //   navigate(path);
-  // };
+  }, []);
 
   return (
     <div className="relative h-screen overflow-hidden z-0">
-      {/* Navbar */}
-      <div className="absolute top-0 w-full z-10">
-        <Navbar />
-      </div>
+       {/* Navbar */}
+       <div className="absolute top-0 w-full z-10">
+         <Navbar />
+       </div>
 
-      <div></div>
+    {/* Slideshow */}
+    <div className="absolute inset-0">
+      {items.map((item, index) => (
+         <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 flex items-center justify-center ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {/* Slide Content */}
+          {item.type === "image" ? (
+            <img
+              src={item.src}
+              alt={`Slide ${index}`}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <video
+              src={item.src}
+              autoPlay
+              muted
+              loop
+              className="w-full h-full object-cover"
+            />
+          )}
 
-      {/* Slideshow */}
-      <div className="absolute inset-0">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {item.type === "image" ? (
-              <img
-                src={item.src}
-                alt={`Slide ${index}`}
-                className="w-full h-full object-cover"
+          {/* Overlay Text */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
+            <p className="leading-none text-center">
+              <Heading
+                upperText={item.text.upperText}
+                lowerText={item.text.lowerText}
+                upperStyle={item.text.upperStyle}
+                lowerStyle={item.text.lowerStyle}
               />
-            ) : (
-              <video
-                src={item.src}
-                autoPlay
-                muted
-                loop
-                className="w-full h-full object-cover"
-              />
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Heading and Buttons */}
-  
-      <div className="absolute bottom-16 left-8 z-20 text-white">
-        
-        <p className="leading-none">
-         <Heading
-           upperText="NEW"
-           lowerText="ARRIVALS"
-           upperStyle="text-30px-vw font-syncopate font-bold text-[#ffffff]"
-           lowerStyle="text-[1.56vw] font-syncopate font-bold text-[#ffffff]"
-      />
-        </p>
+            </p>
+            </div>
         <div className="flex gap-4 leading-3">
       
           <Button

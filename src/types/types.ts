@@ -89,3 +89,14 @@ export type Categories2 = {
   sportsBras?: CategoryWithAd | CategoryWithAd;
   leggings?: CategoryWithAd | CategoryWithAd;
 };
+
+type SlideItem = {
+  type: "image" | "video";
+  src: string;
+  text: {
+    upperText: string;
+    lowerText: string;
+    upperStyle: string;
+    lowerStyle: string;
+  };
+};
