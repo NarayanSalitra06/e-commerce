@@ -210,6 +210,54 @@ import type { Categories, Categories2, filterArr, womenFitness} from "../types/t
           }, {
             img1: "/filter/img1.webp",
             img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },  {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
           }, 
 
     
