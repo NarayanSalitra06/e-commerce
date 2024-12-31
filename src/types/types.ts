@@ -90,7 +90,7 @@ export type Categories2 = {
   leggings?: CategoryWithAd | CategoryWithAd;
 };
 
-type SlideItem = {
+export type SlideItem = {
   type: "image" | "video";
   src: string;
   text: {
@@ -100,3 +100,19 @@ type SlideItem = {
     lowerStyle: string;
   };
 };
+export interface filtertype {
+ img1?:string,
+ img2?:string,
+}
+export interface filterArr{
+ data?:  filtertype[];
+}
+
+export interface ButtonProps {
+  text: string;
+  navigateTo: string;
+  buttonStyle?: string;
+  isExternal?: boolean; 
+}
+
+

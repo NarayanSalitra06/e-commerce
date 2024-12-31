@@ -6,8 +6,8 @@ export  const items = [
         text: {
           upperText: "NEW",
           lowerText: "ARRIVALS",
-          upperStyle: "text-[3vw] font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "text-[1.5vw] font-syncopate font-bold text-[#ffffff]",
+          upperStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
 
@@ -17,8 +17,8 @@ export  const items = [
         text: {
           upperText: "TIMELESS",
           lowerText: "STAPLES",
-          upperStyle: "text-[3vw] font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "text-[1.5vw] font-syncopate font-bold text-[#ffffff]",
+          upperStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
     
@@ -26,10 +26,10 @@ export  const items = [
       type: "image",
       src: "/home/img1.webp",
       text: {
-        upperText: "BEST",
+        upperText:"BEST",
         lowerText: "SELLERS",
-        upperStyle: "text-[3vw] font-syncopate font-bold text-[#ffffff]",
-        lowerStyle: "text-[1.5vw] font-syncopate font-bold text-[#ffffff]",
+        upperStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        lowerStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
       },
     }, 
   ];

@@ -1,4 +1,4 @@
-import type { Categories, Categories2, womenFitness} from "../types/types";
+import type { Categories, Categories2, filterArr, womenFitness} from "../types/types";
  export const categories: Categories = {
     featured: {
       adImage: "/header/men/img2.webp",
@@ -48,7 +48,7 @@ import type { Categories, Categories2, womenFitness} from "../types/types";
           },
         ],
       },
-      clothing: {
+      clothing: {  
         adImage: "/header/women/img1.webp",
         items: [
           {
@@ -133,3 +133,86 @@ import type { Categories, Categories2, womenFitness} from "../types/types";
             text: "LIFESTYLE",
           },
       ];
+      export const filterdata: filterArr[] = [
+        {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+        },
+        {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1:"/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1:"/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2:"/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          },
+          {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          }, {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          }, {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          }, {
+            img1: "/filter/img1.webp",
+            img2: "/filter/img2.webp",
+          }, 
+
+    
+
+    
+    ]
