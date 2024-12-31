@@ -89,3 +89,11 @@ export type Categories2 = {
   sportsBras?: CategoryWithAd | CategoryWithAd;
   leggings?: CategoryWithAd | CategoryWithAd;
 };
+export interface filtertype {
+ img1?:string,
+ img2?:string,
+}
+export interface filterArr{
+ data?:  filtertype[];
+}
+

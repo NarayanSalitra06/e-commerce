@@ -4,14 +4,15 @@ import WomenFitness from "../components/home/WomenFitness";
 import { ProductGrid } from "../components/features/ProductGrid";
 import VideoComponent from "../components/home/VideoComponent";
 import SwiperSlider from "../components/home/SwiperSlider";
-import { menFitnessdata, womenFitnessdata } from "../data/Header";
+import { filterdata, menFitnessdata, womenFitnessdata } from "../data/Header";
+import Filter from "../components/home/Filter";
 
 const Home: React.FC = () => {
   return (
     <div>
       <Banner />
       <SwiperSlider data={womenFitnessdata} />
-      <ProductGrid />
+      <Filter data={filterdata}></Filter>
       <SwiperSlider data={menFitnessdata} />
       <VideoComponent
         videoSrc="/home/video.mp4"
