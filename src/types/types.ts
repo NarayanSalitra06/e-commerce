@@ -115,4 +115,18 @@ export interface ButtonProps {
   isExternal?: boolean; 
 }
 
+export interface VideoComponentProps {
+  videoSrc: string;
+  buttonText: string; // Expecting two words
+  subHeading: string;
+  smVideoSrc:string,
+  mdVideoSrc:string,
+}
+
+export interface HeadingProps {
+  upperText: string;
+  lowerText: string; 
+  upperStyle?: string; 
+  lowerStyle?: string;
+}
 

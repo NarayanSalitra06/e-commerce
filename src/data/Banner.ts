@@ -6,8 +6,8 @@ export  const items = [
         text: {
           upperText: "NEW",
           lowerText: "ARRIVALS",
-          upperStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          upperStyle: " sm:text-[1.56vw] md:text-[1.56vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
 
@@ -17,8 +17,8 @@ export  const items = [
         text: {
           upperText: "TIMELESS",
           lowerText: "STAPLES",
-          upperStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
     
@@ -28,8 +28,44 @@ export  const items = [
       text: {
         upperText:"BEST",
         lowerText: "SELLERS",
-        upperStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-        lowerStyle: "text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+      },
+    }, 
+  ];
+  
+export  const mobileItems = [
+    
+    {
+        type: "video",
+        src: "/home/mobVideobanner.mp4",
+        text: {
+          upperText: "NEW",
+          lowerText: "ARRIVALS",
+          upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        },
+      },
+
+      {
+        type: "image",
+        src: "/home/main/banner2mob.jpg",
+        text: {
+          upperText: "TIMELESS",
+          lowerText: "STAPLES",
+          upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        },
+      },
+    
+    {
+      type: "image",
+      src: "/home/main/banner3mob.jpg",
+      text: {
+        upperText:"BEST",
+        lowerText: "SELLERS",
+        upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
       },
     }, 
   ];

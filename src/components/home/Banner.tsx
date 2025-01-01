@@ -1,19 +1,36 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
-import Heading from "./Heading";
+import Heading from "../common/Heading";
 import Button from "../common/Button";
-import { items } from "../../data/Banner";
+import { items, mobileItems } from "../../data/Banner";
 
 const Banner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if screen size is mobile or tablet
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex + 1) % (isMobile ? mobileItems.length : items.length)
+      );
     }, 7000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
+
+  const currentItems = isMobile ? mobileItems : items;
 
   return (
     <div className="relative h-screen overflow-hidden z-0">
@@ -24,7 +41,7 @@ const Banner: React.FC = () => {
 
       {/* Slideshow */}
       <div className="absolute inset-0">
-        {items.map((item, index) => (
+        {currentItems.map((item, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 flex flex-col items-center justify-end ${
@@ -49,7 +66,7 @@ const Banner: React.FC = () => {
             )}
 
             {/* Overlay Text */}
-            <div className="absolute bottom-10 flex flex-col items-start justify-start w-full  bg-opacity-50 p-4">
+            <div className="absolute bottom-10 flex flex-col items-start justify-start w-full bg-opacity-50 p-4">
               <p className="leading-none text-center mb-4">
                 <Heading
                   upperText={item.text.upperText}
@@ -65,19 +82,19 @@ const Banner: React.FC = () => {
                   <Button
                     text="Shop Women"
                     navigateTo="/shop-women"
-                    buttonStyle="bg-white text-[#000000] text-[1.3vw] font-inter px-6 py-3"
+                    buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                   />
                 ) : (
                   <>
                     <Button
                       text="Shop Women"
                       navigateTo="/shop-women"
-                      buttonStyle="bg-white text-[#000000] text-[1.3vw] font-inter px-6 py-3"
+                      buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                     />
                     <Button
                       text="Shop Men"
                       navigateTo="/shop-men"
-                      buttonStyle="bg-white text-[#000000] text-[1.3vw] font-inter px-6 py-3"
+                      buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                     />
                   </>
                 )}
@@ -91,4 +108,3 @@ const Banner: React.FC = () => {
 };
 
 export default Banner;
-
