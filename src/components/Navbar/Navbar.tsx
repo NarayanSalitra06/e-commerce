@@ -7,6 +7,7 @@ import { BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 import PopUp from "./PopUp";
 import { categories, categories2 } from "../../data/Header";
 import MobPopUp from "./MobPopUp";
+import VerticalMarquee from "./VerticalMarquee";
 
 interface HelpButton {
   name: string;
@@ -25,6 +26,7 @@ const Navbar: React.FC = () => {
   const [translateY, setTranslateY] = useState<number>(0);
   const [startY, setStartY] = useState<number>(0);
   const [hideHeader, setHideHeader] = useState<boolean>(false);
+  const [bgclr, setBgclr] = useState<string>("black");
   const helpButton: HelpButton[] = [
     { name: "Help Center" },
     { name: "Shipping Info" },
@@ -60,6 +62,12 @@ const Navbar: React.FC = () => {
           : event.touches[0].clientY - startY;
       setTranslateY(Math.max(newY, 0)); // Ensure it doesn't go above the starting position
     }
+  };
+  const handlemarqueeColor = () => {
+    setBgclr("black");
+  };
+  const handlemarqueeColorWhite = () => {
+    setBgclr("white");
   };
 
   const handleDragEnd = () => {
@@ -136,11 +144,17 @@ const Navbar: React.FC = () => {
       className={`hover:bg-white hover:text-black  fixed w-full top-0 z-50 ${
         hideHeader ? "bg-white text-black" : "md:text-white"
       }`}
+      onMouseEnter={handlemarqueeColorWhite}
+      onMouseLeave={handlemarqueeColor}
     >
       <div className="flex sm:justify-between px-3 justify-center items-center">
         {!hideHeader && (
-          <>
-            <h1>Free domestic shipping over $150 and 30-day return</h1>
+          <div className=" ">
+            <div>
+              {" "}
+              <VerticalMarquee bgclr={bgclr} />
+            </div>
+
             <div
               className="md:p-3 p-5 text-[0.8vw] font-bold hidden sm:block"
               onMouseLeave={() => setHelpToggle(false)}
@@ -168,7 +182,7 @@ const Navbar: React.FC = () => {
                 </div>
               )}
             </div>
-          </>
+          </div>
         )}
       </div>
 

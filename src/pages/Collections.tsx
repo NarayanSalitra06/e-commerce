@@ -13,8 +13,8 @@ const Collections: React.FC = () => {
   };
 
   return (
-    <div>
-      <div className="lg:hidden">
+    <div className="bg-white">
+      <div className="lg:hidden ">
         {" "}
         <BottomDrawer />
       </div>

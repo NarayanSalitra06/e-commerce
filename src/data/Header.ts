@@ -271,7 +271,17 @@ import type { Categories, Categories2, filterArr, sideBarBtnCategary, womenFitne
     btnAll:["Unisex","Women"]
   }, {
     btnName:"Color",
-    btnAll:["black","green","yellow" ,"pnk","purple","orange","white",'brown',"blue"]
+    btnAll:[  "#000000", // black
+      "#008000", // green
+      "#FFFF00", // yellow
+      "#FFC0CB", // pink
+      "#800080", // purple
+      "#FFA500", // orange
+      "#FFFFFF", // white
+      "#A52A2A", // brown
+      "#0000FF"  // blue
+      ,
+      ]
   }, {
     btnName:"Size",
     btnAll:["XS","S","M" ,"L","XL","2XL","3XL"]
