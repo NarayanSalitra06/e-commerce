@@ -23,6 +23,7 @@ const Home: React.FC = () => {
          />
 
       <SwiperSlider data={womenFitnessdata} />
+      
       <ToggleBtn buttons={["men", "women"]}></ToggleBtn>
 
       

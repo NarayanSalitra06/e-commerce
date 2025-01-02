@@ -16,7 +16,6 @@ const SwiperSlider: React.FC<womenFitnessObject> = ({ data }) => {
   console.log("SwiperSlider data:", data); // Debugging log
   return (
     <>
-
       <div className="w-full  py-8">
         <Swiper
           spaceBetween={15}
