@@ -10,8 +10,9 @@ import Typography from "@mui/material/Typography";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import SideBar from "./Collections/SideBar";
 import { SideBardata } from "../data/Header";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
-const drawerBleeding = 56;
+const drawerBleeding = 0;
 
 interface Props {
   /**
@@ -72,8 +73,27 @@ export default function BottomDrawer(props: Props) {
           },
         }}
       />
-      <Box sx={{ textAlign: "center", pt: 0, bgcolor: "red", height: "40px" }}>
-        <Button onClick={toggleDrawer(true)}>Open</Button>
+      <Box
+        sx={{
+          position: "fixed", // Fix the button at the bottom
+          bottom: 10,
+          right: 30, // Position it at the bottom of the viewport
+          width: "8%", // Ensure it spans the full width
+          bgcolor: "white",
+
+          textAlign: "center", // Center the button horizontally
+          zIndex: 100, // Ensure it appears above other content
+          borderRadius: 100,
+          padding: 0.2,
+        }}
+      >
+        <div className="flex  justify-center items-center ">
+          {" "}
+          <AiOutlinePlusCircle
+            className="text-2xl   sm:h-[6vw] h-[10vw] sm:w-[6vw] w-[10vw] "
+            onClick={toggleDrawer(true)}
+          />
+        </div>
       </Box>
       <SwipeableDrawer
         container={container}
@@ -82,7 +102,7 @@ export default function BottomDrawer(props: Props) {
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
         swipeAreaWidth={drawerBleeding}
-        disableSwipeToOpen={false}
+        disableSwipeToOpen={true}
         ModalProps={{
           keepMounted: true,
         }}
