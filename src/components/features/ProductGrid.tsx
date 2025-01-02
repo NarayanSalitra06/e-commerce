@@ -290,7 +290,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
         )}
 
         {!hasMore && (
-          <div className="text-center text-gray-600 mt-8">
+          <div className="text-center  text-gray-600 mt-8">
             No more products to load
           </div>
         )}

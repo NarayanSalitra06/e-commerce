@@ -89,6 +89,17 @@ export type Categories2 = {
   sportsBras?: CategoryWithAd | CategoryWithAd;
   leggings?: CategoryWithAd | CategoryWithAd;
 };
+
+export type SlideItem = {
+  type: "image" | "video";
+  src: string;
+  text: {
+    upperText: string;
+    lowerText: string;
+    upperStyle: string;
+    lowerStyle: string;
+  };
+};
 export interface filtertype {
  img1?:string,
  img2?:string,
@@ -106,4 +117,26 @@ export interface sideBarBtnCategary{
    btnAll?:string[]
 }
 
+
+export interface ButtonProps {
+  text: string;
+  navigateTo: string;
+  buttonStyle?: string;
+  isExternal?: boolean; 
+}
+
+export interface VideoComponentProps {
+  videoSrc: string;
+  buttonText: string; // Expecting two words
+  subHeading: string;
+  smVideoSrc:string,
+  mdVideoSrc:string,
+}
+
+export interface HeadingProps {
+  upperText: string;
+  lowerText: string; 
+  upperStyle?: string; 
+  lowerStyle?: string;
+}
 

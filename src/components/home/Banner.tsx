@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import Heading from "./Heading";
+import Heading from "../common/Heading";
 import Button from "../common/Button";
+import { items, mobileItems } from "../../data/Banner";
 
 const Banner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Slideshow items
-  const items = [
-    { type: "image", src: "/home/img1.webp" },
-    { type: "video", src: "/home/videobanner.mp4" },
-    { type: "image", src: "/home/img2.webp" },
-  ];
+  useEffect(() => {
+    // Check if screen size is mobile or tablet
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
 
-  // Change slides every 5 seconds
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 4000);
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex + 1) % (isMobile ? mobileItems.length : items.length)
+      );
+    }, 7000);
 
     return () => clearInterval(interval);
-  }, [items.length]);
+  }, [isMobile]);
 
-  // const handleNavigation = (path: string) => {
-  //   navigate(path);
-  // };
+  const currentItems = isMobile ? mobileItems : items;
 
   return (
     <div className="relative h-screen overflow-hidden z-0">
@@ -35,17 +39,16 @@ const Banner: React.FC = () => {
         <Navbar />
       </div>
 
-      <div></div>
-
       {/* Slideshow */}
       <div className="absolute inset-0">
-        {items.map((item, index) => (
+        {currentItems.map((item, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-1000 flex flex-col items-center justify-end ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
+            {/* Slide Content */}
             {item.type === "image" ? (
               <img
                 src={item.src}
@@ -61,37 +64,44 @@ const Banner: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             )}
+
+            {/* Overlay Text */}
+            <div className="absolute bottom-10 flex flex-col items-start justify-start w-full bg-opacity-50 p-4">
+              <p className="leading-none text-center mb-4">
+                <Heading
+                  upperText={item.text.upperText}
+                  lowerText={item.text.lowerText}
+                  upperStyle={item.text.upperStyle}
+                  lowerStyle={item.text.lowerStyle}
+                />
+              </p>
+
+              {/* Buttons */}
+              <div className="flex gap-4">
+                {item.type === "video" ? (
+                  <Button
+                    text="Shop Women"
+                    navigateTo="/shop-women"
+                    buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                  />
+                ) : (
+                  <>
+                    <Button
+                      text="Shop Women"
+                      navigateTo="/shop-women"
+                      buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                    />
+                    <Button
+                      text="Shop Men"
+                      navigateTo="/shop-men"
+                      buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                    />
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         ))}
-      </div>
-
-      {/* Heading and Buttons */}
-  
-      <div className="absolute bottom-16 left-8 z-20 text-white">
-        
-        <p className="leading-none">
-         <Heading
-           upperText="NEW"
-           lowerText="ARRIVALS"
-           upperStyle="text-30px-vw font-syncopate font-bold text-[#ffffff]"
-           lowerStyle="text-[1.56vw] font-syncopate font-bold text-[#ffffff]"
-      />
-        </p>
-        <div className="flex gap-4 leading-3">
-      
-          <Button
-                  text="Shop Women"
-                  navigateTo="/shop-women"
-                  buttonStyle="bg-white text-[#000000] text-13px-vw font-inter px-6 py-3"
-    
-                />
-
-          <Button
-                  text="Shop Men"
-                  navigateTo="/shop-men"
-                  buttonStyle="bg-white text-[#000000] text-[13px] font-inter px-6 py-3"
-                />
-        </div>
       </div>
     </div>
   );

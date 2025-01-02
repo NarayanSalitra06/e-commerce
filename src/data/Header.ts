@@ -49,7 +49,7 @@ import type { Categories, Categories2, filterArr, sideBarBtnCategary, womenFitne
           },
         ],
       },
-      clothing: {
+      clothing: {  
         adImage: "/header/women/img1.webp",
         items: [
           {

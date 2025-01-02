@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { womenFitnessObject } from "../../types/types";
+import Button from "../common/Button";
 
 // Import required modules
 // import { Pagination } from "swiper/modules";
@@ -15,6 +16,7 @@ const SwiperSlider: React.FC<womenFitnessObject> = ({ data }) => {
   console.log("SwiperSlider data:", data); // Debugging log
   return (
     <>
+
       <div className="w-full  py-8">
         <Swiper
           spaceBetween={15}
@@ -50,9 +52,13 @@ const SwiperSlider: React.FC<womenFitnessObject> = ({ data }) => {
                 <p className="font-semibold text-[27px] font-syncopate text-stone-50">
                   {item.text}
                 </p>
-                <button className="mt-2 bg-white text-black font-semibold px-6 py-2 rounded-[3vh]">
-                  Shop Now
-                </button>
+
+                {/* Buttons */}
+                <Button
+                    text="Shop Women"
+                    navigateTo="/shop-women"
+                    buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                  />
               </div>
             </SwiperSlide>
           ))}
