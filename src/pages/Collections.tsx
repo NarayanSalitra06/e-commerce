@@ -19,7 +19,7 @@ const Collections: React.FC = () => {
         <img src="" alt="" />
       </div>
       <div className="sm:flex  ">
-        <div className="w-[25vw] hidden sm:block ">
+        <div className="w-[25vw] hidden sm:block bg-white">
           <SideBar buttondata={SideBardata}></SideBar>
         </div>
 

@@ -10,7 +10,7 @@ const SideBar: React.FC<sideBarBtnCategary> = ({ buttondata }) => {
     setBtnindex(btnindex === index ? null : index);
   };
   return (
-    <div className="mx-[0.5vw]  ">
+    <div className="mx-[0.5vw]  bg-white z-[-1] ">
       <div className="hidden sm:block  ">Heading</div>
       <div className="hidden sm:block  ">
         <ToggleBtn buttons={["Styles", "ColorsWays"]}></ToggleBtn>
