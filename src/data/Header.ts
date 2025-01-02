@@ -1,4 +1,5 @@
-import type { Categories, Categories2, filterArr, womenFitness} from "../types/types";
+import SideBar from "../components/Collections/SideBar";
+import type { Categories, Categories2, filterArr, sideBarBtnCategary, womenFitness} from "../types/types";
  export const categories: Categories = {
     featured: {
       adImage: "/header/men/img2.webp",
@@ -258,9 +259,31 @@ import type { Categories, Categories2, filterArr, womenFitness} from "../types/t
           },  {
             img1: "/filter/img1.webp",
             img2: "/filter/img2.webp",
-          }, 
+          },   
+    ]
 
-    
+    export const SideBardata:sideBarBtnCategary[]=[
+  {
+    btnName:"Short By:Featured",
+    btnAll:["feature","Seller","NewWest" ,"Price:Low-High","Price:High-Low"]
+  }, {
+    btnName:"Gender",
+    btnAll:["Unisex","Women"]
+  }, {
+    btnName:"Color",
+    btnAll:["black","green","yellow" ,"pnk","purple","orange","white",'brown',"blue"]
+  }, {
+    btnName:"Size",
+    btnAll:["XS","S","M" ,"L","XL","2XL","3XL"]
+  }, {
+    btnName:"Fit",
+    btnAll:["Boxy","Compression","OverSize" ,"Relaxed","Slim"]
+  }, {
+    btnName:" Product Type",
+    btnAll:["Longsleeve","Matching Set","Pump Color" ,"Shit","Top"]
+  }, {
+    btnName:"Collection",
+    btnAll:["AirTech","origin","Power" ,"SeamLess","Zero"]
+  },
 
-    
     ]

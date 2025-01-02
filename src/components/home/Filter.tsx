@@ -35,7 +35,7 @@ const Filter: React.FC<{ data: filterArr[] }> = ({ data }) => {
 
   return (
     <>
-      <div className="mx-[1vw]">
+      <div className="m-[1vw]">
         <Swiper
           spaceBetween={7}
           loop={true}

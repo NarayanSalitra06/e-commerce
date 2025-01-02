@@ -6,12 +6,14 @@ import VideoComponent from "../components/home/VideoComponent";
 import SwiperSlider from "../components/home/SwiperSlider";
 import { filterdata, menFitnessdata, womenFitnessdata } from "../data/Header";
 import Filter from "../components/home/Filter";
+import ToggleBtn from "../components/common/ToggleBtn";
 
 const Home: React.FC = () => {
   return (
     <div>
       <Banner />
       <SwiperSlider data={womenFitnessdata} />
+      <ToggleBtn buttons={["men", "women"]}></ToggleBtn>
       <Filter data={filterdata}></Filter>
       <SwiperSlider data={menFitnessdata} />
       <VideoComponent
