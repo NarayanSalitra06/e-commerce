@@ -108,6 +108,16 @@ export interface filterArr{
  data?:  filtertype[];
 }
 
+export interface sideBarBtnSubCategary{
+    subbtn?:string;
+}
+
+export interface sideBarBtnCategary{
+  btnName?:string,
+   btnAll?:string[]
+}
+
+
 export interface ButtonProps {
   text: string;
   navigateTo: string;

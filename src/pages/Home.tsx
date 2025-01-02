@@ -6,6 +6,7 @@ import VideoComponent from "../components/home/VideoComponent";
 import SwiperSlider from "../components/home/SwiperSlider";
 import { filterdata, menFitnessdata, womenFitnessdata } from "../data/Header";
 import Filter from "../components/home/Filter";
+import ToggleBtn from "../components/common/ToggleBtn";
 // import ButtonLogo from "../components/common/BottomLogo";
 import Heading from "../components/common/Heading";
 
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
          />
 
       <SwiperSlider data={womenFitnessdata} />
+      <ToggleBtn buttons={["men", "women"]}></ToggleBtn>
 
       <Heading
             upperText="Shop"
