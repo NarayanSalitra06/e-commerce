@@ -106,7 +106,8 @@ export default {
         "98px-vw": "5.10vw",
         "99px-vw": "5.16vw",
         "100px-vw": "5.21vw",
-
+         "900px-vw": "47.02",
+           
         // For mobile resolution (375x1080)
         "1px-mvw": "0.27vw",
         "2px-mvw": "0.53vw",

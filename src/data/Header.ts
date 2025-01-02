@@ -1,4 +1,4 @@
-import SideBar from "../components/Collections/SideBar";
+// import SideBar from "../components/Collections/SideBar";
 import type { Categories, Categories2, filterArr, sideBarBtnCategary, womenFitness} from "../types/types";
  export const categories: Categories = {
     featured: {

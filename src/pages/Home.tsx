@@ -23,14 +23,10 @@ const Home: React.FC = () => {
          />
 
       <SwiperSlider data={womenFitnessdata} />
+      
       <ToggleBtn buttons={["men", "women"]}></ToggleBtn>
 
-      <Heading
-            upperText="Shop"
-            lowerText="Winter Essentials"
-            upperStyle="text-[1.67vw] text-start mt-2 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
-            lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-0.vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
-         />
+      
 
       <Filter data={filterdata}></Filter>
 

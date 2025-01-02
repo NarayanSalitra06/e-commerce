@@ -140,3 +140,7 @@ export interface HeadingProps {
   lowerStyle?: string;
 }
 
+export interface ProductImgProps{
+  image:string;
+  color:string
+}
