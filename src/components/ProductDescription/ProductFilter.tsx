@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // import React from 'react'
 // import ProductSlider from './ProductSlider'
 // import { menFitnessdata } from '../../data/Header'
@@ -305,7 +306,6 @@ const ProductFilter: React.FC = () => {
         </div>
       </div>
 
-      <Pra
     </div>
   );
 };

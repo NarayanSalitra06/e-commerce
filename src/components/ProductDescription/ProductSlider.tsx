@@ -5,9 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { womenFitnessObject } from "../../types/types";
-import Button from "../common/Button";
+
 
 // Import required modules
 // import { Pagination } from "swiper/modules";
