@@ -232,7 +232,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {/* Product Info & Variant Selection */}
-      <div className="relative bg-black p-4">
+      <div className="relative bg-white p-4">
         <div {...hoverProps}>
           {/* Product Info */}
           <div
