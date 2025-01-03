@@ -12,7 +12,7 @@ import { womenFitnessObject } from "../../types/types";
 // import { Pagination } from "swiper/modules";
 
 const ProductSlider: React.FC<womenFitnessObject> = ({ data }) => {
-  console.log("SwiperSlider data:", data); // Debugging log
+  // console.log("SwiperSlider data:", data); 
   return (
     <div className="w-full h-full py-0">
     
@@ -24,7 +24,7 @@ const ProductSlider: React.FC<womenFitnessObject> = ({ data }) => {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.2, // For smaller screens
+            slidesPerView: 1, // For smaller screens
           },
           500: {
             slidesPerView: 2, // For larger screens
