@@ -106,6 +106,8 @@ export interface filtertype {
 }
 export interface filterArr{
  data?:  filtertype[];
+ img1:string;
+ img2:string;
 }
 
 export interface sideBarBtnSubCategary{

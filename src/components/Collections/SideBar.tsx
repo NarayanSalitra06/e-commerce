@@ -11,19 +11,8 @@ const SideBar: React.FC<sideBarBtnCategary> = ({ buttondata }) => {
     setBtnindex(btnindex === index ? null : index);
   };
   return (
-    <div className={`mx-[1vw] my-[1vw] w-full   `}>
-      <div className=" hidden lg:block mx-[1vw] ">
-        <Heading
-          upperText={"Women"}
-          lowerText={"Leggings"}
-          upperStyle={
-            "lg:text-[0.8vw] text-[0.8vw]  font-syncopate font-bold text-black"
-          }
-          lowerStyle={
-            " lg:text-[1.2vw] text-[1.56vw] text-start font-syncopate font-bold text-black"
-          }
-        ></Heading>
-      </div>
+    <div className="mx-[0.5vw]  ">
+      <div className="hidden sm:block  "></div>
       <div className="hidden lg:block  ">
         <ToggleBtn buttons={["Styles", "ColorsWays"]}></ToggleBtn>
       </div>
