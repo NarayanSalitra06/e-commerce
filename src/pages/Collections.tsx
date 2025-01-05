@@ -1,39 +1,47 @@
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Bras from "../components/Collections/Bras";
 import SideBar from "../components/Collections/SideBar";
 import { SideBardata } from "../data/Header";
 import ToggleBtn from "../components/common/ToggleBtn";
 import BottomDrawer from "../components/BottomDrawer";
+import Toggleshort from "../components/Collections/Toggleshort";
 
 const Collections: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [isSidebarFixed, setIsSidebarFixed] = useState(false);
+
   const handleSideBar = () => {
     setOpen(!open);
   };
 
   return (
     <div className="bg-white">
-      <div className="lg:hidden ">
-        {" "}
-        <BottomDrawer />
-      </div>
-      <div className="h-[500px] bg-blue-400  ">
+      <div className="h-[500px] bg-blue-400">
         <img src="" alt="" />
       </div>
-      <div className="sm:flex  ">
-        <div className="w-[25vw] hidden lg:block ">
+
+      <div className=" flex items-start">
+        <div className=" lg:flex lg:flex-col  hidden w-[20vw] sticky lg:top-[5vw]">
           <SideBar buttondata={SideBardata}></SideBar>
         </div>
 
-        <div className="sm:flex-1 bg-red-500">
+        {/* Main Content Area */}
+        <div className="flex-1  w-full lg:px-[2vw]">
           <Bras />
         </div>
       </div>
-      <div className="fixed grid grid-cols-4 gap-2 lg:hidden  bottom-[2vw] w-full">
-        <div className="w-full"> </div>
-        <div className="col-span-2">
+
+      {/* Mobile Toggle Button */}
+      <div className="  gap-2 lg:hidden w-full">
+        <div className="col-span-1  fixed left-[2vw] bottom-[2vw]">
+          <Toggleshort></Toggleshort>
+        </div>
+        <div className="col-span-1 fixed left-[30vw] bottom-[2vw]">
           <ToggleBtn buttons={["Styles", "ColorsWays"]}></ToggleBtn>
+        </div>
+        <div className=" col-span-1">
+          <BottomDrawer />
         </div>
       </div>
     </div>

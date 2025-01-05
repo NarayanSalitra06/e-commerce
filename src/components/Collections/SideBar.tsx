@@ -11,7 +11,7 @@ const SideBar: React.FC<sideBarBtnCategary> = ({ buttondata }) => {
     setBtnindex(btnindex === index ? null : index);
   };
   return (
-    <div className="mx-[1vw] my-[1vw]  ">
+    <div className={`mx-[1vw] my-[1vw] w-full   `}>
       <div className=" hidden lg:block mx-[1vw] ">
         <Heading
           upperText={"Women"}

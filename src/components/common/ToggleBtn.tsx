@@ -16,7 +16,7 @@ const ToggleBtn: React.FC<button | width> = ({ buttons, maxWd }) => {
   };
 
   return (
-    <div className="ml-2">
+    <div className="ml-2 ">
       <div className="flex items-center justify-between mr-2">
         <Heading
           upperText="Shop"
@@ -33,7 +33,7 @@ const ToggleBtn: React.FC<button | width> = ({ buttons, maxWd }) => {
       </div>
 
       <div
-        className={`grid grid-cols-2 gap-2 lg:max-w-[24vw] p-1  border-[2px] border-gray-600 rounded-[2vw] `}
+        className={`grid grid-cols-2 gap-2 lg:max-w-[24vw] max-w-[34vw] p-1  border-[2px] border-gray-600 rounded-[2vw] `}
       >
         {buttons?.map((item, index) => (
           <div>

@@ -182,9 +182,7 @@ const ProductFilter: React.FC = () => {
 
       {/* Filter Section */}
 
-      <div
-        className=" w-1/4 bg-white shadow-lg p-6 absolute right-10 rounded-lg top-36 border-[#0d0d0d33] hide-scrollbar border border-solid border-opacity-60  items-start md:h-[80vh] z-20 overflow-y-auto  "
-      >
+      <div className=" w-1/4 bg-white shadow-lg p-6 absolute right-10 rounded-lg top-36 border-[#0d0d0d33] hide-scrollbar border border-solid border-opacity-60  items-start md:h-[80vh] z-20 overflow-y-auto  ">
         <h2 className="text-1xl font-bold">AMPLIFY GEMINI BRA</h2>
 
         <div className="flex w-full items-center justify-between">
@@ -304,8 +302,6 @@ const ProductFilter: React.FC = () => {
           </a>
         </div>
       </div>
-
-      <Pra
     </div>
   );
 };

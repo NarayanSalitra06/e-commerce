@@ -53,7 +53,7 @@ const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
     <div
       style={{
         height: `${containerHeight}px`,
-        width: "100vw",
+        width: "75vw",
         overflow: "hidden",
         position: "relative",
       }}

@@ -1,3 +1,4 @@
+import { GiHamburgerMenu } from "react-icons/gi";
 import * as React from "react";
 import { Global } from "@emotion/react";
 import { styled } from "@mui/material/styles";
@@ -89,7 +90,7 @@ export default function BottomDrawer(props: Props) {
       >
         <div className="flex  justify-center items-center ">
           {" "}
-          <AiOutlinePlusCircle
+          <GiHamburgerMenu
             className="text-2xl   sm:h-[6vw] h-[10vw] sm:w-[6vw] w-[10vw] "
             onClick={toggleDrawer(true)}
           />
@@ -109,7 +110,7 @@ export default function BottomDrawer(props: Props) {
       >
         <StyledBox
           sx={{
-            position: "absolute",
+            position: "fixed",
             top: -drawerBleeding,
             borderTopLeftRadius: 8,
             borderTopRightRadius: 8,
