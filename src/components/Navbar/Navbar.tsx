@@ -6,6 +6,7 @@ import PopUp from "./PopUp";
 import MobPopUp from "./MobPopUp";
 import VerticalMarquee from "./VerticalMarquee";
 import { categories, categories2 } from "../../data/Header";
+import { useLocation } from "react-router-dom";
 
 interface HelpButton {
   name: string;
@@ -25,7 +26,8 @@ const Navbar: React.FC = () => {
   const [translateY, setTranslateY] = useState(0);
   const [startY, setStartY] = useState(0);
   const [hideHeader, setHideHeader] = useState(false);
-  const [bgclr, setBgclr] = useState("black");
+  const [bgclr, setBgclr] = useState("black"); 
+  
 
   const helpButton: HelpButton[] = [
     { name: "Help Center" },
@@ -94,6 +96,8 @@ const Navbar: React.FC = () => {
       window.removeEventListener("touchend", handleDragEnd);
     };
   }, [dragging]);
+  const location = useLocation();
+  const signinpage = location.pathname.includes("/signin");
 
   useEffect(() => {
     setSendingData(activeData === "Men" ? categories : categories2);
@@ -127,13 +131,17 @@ const Navbar: React.FC = () => {
   return (
     <div
       className={`hover:bg-white hover:text-black fixed w-full top-0 z-50 ${
-        hideHeader ? "bg-white text-black" : "md:text-white"
-      }`}
+        signinpage ? "!text-black" : ""
+      } ${hideHeader ? "bg-white text-black" : "md:text-white"}`}
       onMouseEnter={handlemarqueeColorWhite}
       onMouseLeave={handlemarqueeColor}
     >
-      <div className="flex sm:justify-between px-2 w-full justify-center items-center">
-        {!hideHeader && <VerticalMarquee bgclr={bgclr} />}
+      <div
+        className={`${
+          hideHeader ? "hidden" : "block"
+        } flex sm:justify-between px-2 w-full justify-center items-center`}
+      >
+        {hideHeader ? <VerticalMarquee bgclr={bgclr}/> : <VerticalMarquee bgclr={bgclr} />}
         <div
           className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
           onMouseLeave={() => setHelpToggle(false)}

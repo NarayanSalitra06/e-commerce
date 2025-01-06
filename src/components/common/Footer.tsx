@@ -1,160 +1,268 @@
+// import React from "react";
+
+// const Footer: React.FC = () => {
+//   return (
+//     <footer className="md:mb-[12vw] bg-white w-full font-inter pt-6 border-t border-[#0d0d0d33] border-opacity-20 border-solid">
+//       {/* Main Container */}
+//       <div className="relative w-full border border-[#0d0d0d33] border-opacity-20 border-solid">
+//         <div className="grid lg:grid-cols-[75%_25%] md:flex-col items-center w-full">
+//           {/* Right Container */}
+//           <div className="p-5 border-l border-[#0d0d0d33] border-opacity-20 border-solid lg:order-2 md:order-1 sm:order-1">
+//             <form className="p-3 rounded-lg">
+//               <h3 className="text-[2vw] md:text-[4vw] sm:text-[5vw] pb-[40px] tracking-tighter leading-none text-[#444444] font-inter font-black">
+//                 Stay<br /> Connected
+//               </h3>
+//               <div className="mb-4">
+//                 <input
+//                   type="tel"
+//                   placeholder="Enter Phone Number"
+//                   className="w-full px-4 py-2 text-black rounded-[1.04vw] md:rounded-md border border-gray-400 mb-2"
+//                 />
+//                 <input
+//                   type="email"
+//                   placeholder="Enter Email Address"
+//                   className="w-full px-4 py-2 text-black rounded-[1.04vw] md:rounded-md border border-gray-400"
+//                 />
+//               </div>
+//               <button className="w-full bg-black text-white mb-4 p-1 text-[15px] md:text-[12px] sm:text-[10px] rounded-[1.04vw] py-2 font-work-sans font-semibold">
+//                 Subscribe
+//               </button>
+//               <p className="text-[10px] text-[#5b5b5b] font-work-sans mt-2">
+//                 By signing up via text you agree to receive recurring automated
+//                 marketing messages and shopping cart reminders at the phone
+//                 number provided. Consent is not a condition of purchase. Reply
+//                 STOP to unsubscribe. HELP for help. Msg frequency varies. Msg &
+//                 Data rates may apply. View{" "}
+//                 <a href="#" className="underline">
+//                   Privacy Policy
+//                 </a>{" "}
+//                 &{" "}
+//                 <a href="#" className="underline">
+//                   ToS
+//                 </a>
+//               </p>
+//             </form>
+//           </div>
+
+//           {/* Left Container */}
+//           <div className="w-full mt-0 mb-6 pb-0 lg:mb-0 border-r border-[#0d0d0d33] border-opacity-20 border-solid lg:order-1 md:order-2 sm:order-2">
+//             <div className="p-5 lg:pb-10 border-b lg:border-b-12 border-[#0d0d0d33] border-opacity-20 border-solid">
+//               <div className="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col items-start gap-y-[20px]">
+//                 {/* Help Section */}
+//                 <div>
+//                   <h3 className="font-bold mb-2 lg:mt-0 lg:mb-6 text-[#0d0d0d] text-[13px] font-inter">
+//                     Help
+//                   </h3>
+//                   <ul className="text-[11px] text-[#0d0d0dcc] font-inter">
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Help Center
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Careers
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Contact Us
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Shipping Info
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Track My Order
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Returns & Exchanges
+//                       </a>
+//                     </li>
+//                   </ul>
+//                 </div>
+
+//                 {/* More Section */}
+//                 <div>
+//                   <h3 className="font-bold mb-2 lg:mt-0 lg:mb-6 text-[#0d0d0d] text-[13px] font-inter">
+//                     More
+//                   </h3>
+//                   <ul className="text-[11px] text-[#0d0d0dcc] font-inter">
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Share The Look
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         About Us
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Alphaland
+//                       </a>
+//                     </li>
+//                     <li>
+//                       <a href="#" className="hover:underline block mb-2">
+//                         Summer Shredding
+//                       </a>
+//                     </li>
+//                   </ul>
+//                 </div>
+
+//                 {/* Address Section */}
+//                 <div>
+//                   <h3 className="font-bold mb-2 lg:mt-0 lg:mb-6 text-[#0d0d0d] text-[13px] font-inter">
+//                     Address
+//                   </h3>
+//                   <p className="text-[11px] text-[#0d0d0dcc] font-inter">
+//                     <a href="#">
+//                       13927 South Gessner Road, Missouri City Texas 77489,
+//                       United States
+//                     </a>
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Footer Links */}
+//             <div className="md:grid md:grid-cols-2 sm:flex sm:flex-col sm:items-start justify-between p-[20px] gap-[15px]">
+//               {/* Left Footer */}
+//               <div className="flex flex-col items-start justify-start border-r border-[#0d0d0d33] border-opacity-20 border-solid">
+//                 <h3 className="font-bold text-[13px] text-[#0d0d0dcc] font-inter">
+//                   Premium Workout Clothes & Athleisure
+//                 </h3>
+//                 <p className="text-[12px] text-[#0d0d0dcc] pt-1 font-inter">
+//                   Experience the next level of comfort, style, and functionality
+//                   with our premium athleisure collections designed for those who
+//                   demand the best. Shop now!
+//                 </p>
+//               </div>
+
+//               {/* Right Footer */}
+//               <div className="pt-1 md:pr-[10px]">
+//                 <p className="text-[9px] text-[#0d0d0dcc] text-center font-inter md:items-center md:justify-center">
+//                   Privacy Policy • Terms of Service • Sitemap • Accessibility •
+//                   Do not sell or share my personal information
+//                 </p>
+//                 <p className="text-[10px] font-semibold text-[#0d0d0dcc] text-center font-inter md:items-center md:justify-center">
+//                   © 2024 • Alphalete Athletics LLC • All Rights Reserved
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// export default Footer;
+
 import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="md:mb-[12vw] bg-white w-full font-inter pt-6 border-t border-[#0d0d0d33] border-opacity-20 border-solid">
+    <footer className="bg-white  w-full mb-[16vw] font-inter pt-0 border-t border-[#0d0d0d33] border-opacity-20  border-solid relative">
       {/* Main Container */}
       <div className="relative w-full border border-[#0d0d0d33] border-opacity-20 border-solid">
-        <div className="grid lg:grid-cols-[75%_25%] md:flex-col items-center w-full">
-          {/* Right Container */}
-          <div className="p-5 border-l border-[#0d0d0d33] border-opacity-20 border-solid lg:order-2 md:order-1 sm:order-1">
-            <form className="p-3 rounded-lg">
-              <h3 className="text-[2vw] md:text-[4vw] sm:text-[5vw] pb-[40px] tracking-tighter leading-none text-[#444444] font-inter font-black">
-                Stay<br /> Connected
+        <div className="flex flex-col lg:grid lg:grid-cols-[70%_30%] items-start w-full">
+          {/* Right Container - Moved up for mobile */}
+          <div className="w-full lg:border-l border-[#0d0d0d33] border-opacity-20 border-solid order-1 lg:order-2">
+            <form className="p-8 lg:max-w-[300px]">
+              <h3 className="lg:text-[42px] md:text-[4vw] sm:text-[5vw] pb-8 tracking-tighter leading-[0.9] text-[#444444] font-inter font-black">
+                Stay<br />Connected
               </h3>
-              <div className="mb-4">
+              <div className="space-y-3">
                 <input
                   type="tel"
                   placeholder="Enter Phone Number"
-                  className="w-full px-4 py-2 text-black rounded-[1.04vw] md:rounded-md border border-gray-400 mb-2"
+                  className="w-full px-4 py-3 text-black rounded-lg border border-gray-300"
                 />
                 <input
                   type="email"
                   placeholder="Enter Email Address"
-                  className="w-full px-4 py-2 text-black rounded-[1.04vw] md:rounded-md border border-gray-400"
+                  className="w-full px-4 py-3 text-black rounded-lg border border-gray-300"
                 />
               </div>
-              <button className="w-full bg-black text-white mb-4 p-1 text-[15px] md:text-[12px] sm:text-[10px] rounded-[1.04vw] py-2 font-work-sans font-semibold">
+              <button className="w-full bg-[#2d2d2d] text-white mt-3 mb-4 py-3 rounded-lg font-medium">
                 Subscribe
               </button>
-              <p className="text-[10px] text-[#5b5b5b] font-work-sans mt-2">
-                By signing up via text you agree to receive recurring automated
-                marketing messages and shopping cart reminders at the phone
-                number provided. Consent is not a condition of purchase. Reply
-                STOP to unsubscribe. HELP for help. Msg frequency varies. Msg &
-                Data rates may apply. View{" "}
-                <a href="#" className="underline">
-                  Privacy Policy
-                </a>{" "}
-                &{" "}
-                <a href="#" className="underline">
-                  ToS
-                </a>
+              <p className="text-[10px] text-[#5b5b5b] font-work-sans">
+                By signing up via text you agree to receive recurring automated marketing messages and shopping cart reminders at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. HELP for help. Msg frequency varies. Msg & Data rates may apply. View <a href="#" className="underline">Privacy Policy</a> & <a href="#" className="underline">ToS</a>
               </p>
             </form>
           </div>
 
           {/* Left Container */}
-          <div className="w-full mt-0 mb-6 pb-0 lg:mb-0 border-r border-[#0d0d0d33] border-opacity-20 border-solid lg:order-1 md:order-2 sm:order-2">
-            <div className="p-5 lg:pb-10 border-b lg:border-b-12 border-[#0d0d0d33] border-opacity-20 border-solid">
-              <div className="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col items-start gap-y-[20px]">
+          <div className="w-full lg:border-r border-[#0d0d0d33] border-opacity-20 border-solid order-2 lg:order-1">
+            {/* Links Container */}
+            <div className="p-8 lg:pb-40 border-b border-[#0d0d0d33] border-opacity-20 border-solid">
+              <div className="lg:flex lg:space-x-32">
                 {/* Help Section */}
                 <div>
-                  <h3 className="font-bold mb-2 lg:mt-0 lg:mb-6 text-[#0d0d0d] text-[13px] font-inter">
+                  <h3 className="font-bold mb-6 text-[#0d0d0d] text-[13px] font-inter">
                     Help
                   </h3>
-                  <ul className="text-[11px] text-[#0d0d0dcc] font-inter">
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Help Center
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Contact Us
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Shipping Info
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Track My Order
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Returns & Exchanges
-                      </a>
-                    </li>
+                  <ul className="text-[11px] text-[#0d0d0dcc] space-y-2 font-inter">
+                    <li><a href="#" className="hover:underline">Contact</a></li>
+                    <li><a href="#" className="hover:underline">Returns & Exchanges</a></li>
+                    <li><a href="#" className="hover:underline">Help Center</a></li>
+                    <li><a href="#" className="hover:underline">Brexit Info</a></li>
                   </ul>
                 </div>
 
                 {/* More Section */}
                 <div>
-                  <h3 className="font-bold mb-2 lg:mt-0 lg:mb-6 text-[#0d0d0d] text-[13px] font-inter">
+                  <h3 className="font-bold mb-6 text-[#0d0d0d] text-[13px] font-inter">
                     More
                   </h3>
-                  <ul className="text-[11px] text-[#0d0d0dcc] font-inter">
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Share The Look
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Alphaland
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="hover:underline block mb-2">
-                        Summer Shredding
-                      </a>
-                    </li>
+                  <ul className="text-[11px] text-[#0d0d0dcc] space-y-2 font-inter">
+                    <li><a href="#" className="hover:underline">Share The Look</a></li>
+                    <li><a href="#" className="hover:underline">About Us</a></li>
+                    <li><a href="#" className="hover:underline">Alphaland</a></li>
+                    <li><a href="#" className="hover:underline">Summer Shredding</a></li>
                   </ul>
                 </div>
 
                 {/* Address Section */}
                 <div>
-                  <h3 className="font-bold mb-2 lg:mt-0 lg:mb-6 text-[#0d0d0d] text-[13px] font-inter">
+                  <h3 className="font-bold mb-6 text-[#0d0d0d] text-[13px] font-inter">
                     Address
                   </h3>
-                  <p className="text-[11px] text-[#0d0d0dcc] font-inter">
-                    <a href="#">
-                      13927 South Gessner Road, Missouri City Texas 77489,
-                      United States
-                    </a>
+                  <p className="text-[11px] text-[#0d0d0dcc] max-w-[200px] font-inter">
+                    13927 South Gessner Road, Missouri City Texas 77489, United States
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Footer Links */}
-            <div className="md:grid md:grid-cols-2 sm:flex sm:flex-col sm:items-start justify-between p-[20px] gap-[15px]">
-              {/* Left Footer */}
-              <div className="flex flex-col items-start justify-start border-r border-[#0d0d0d33] border-opacity-20 border-solid">
-                <h3 className="font-bold text-[13px] text-[#0d0d0dcc] font-inter">
-                  Premium Workout Clothes & Athleisure
-                </h3>
-                <p className="text-[12px] text-[#0d0d0dcc] pt-1 font-inter">
-                  Experience the next level of comfort, style, and functionality
-                  with our premium athleisure collections designed for those who
-                  demand the best. Shop now!
+            {/* Bottom Section */}
+            <div className="p-8 lg:flex lg:justify-between items-start">
+            <div className="lg:text-left mt-4 lg:mt-0 lg:border-r border-[#0d0d0d33] border-opacity-20 border-solid ">
+                <p className="text-[9px] text-[#0d0d0dcc] mb-1 font-inter">
+                  Privacy Policy • Terms of Service • Sitemap • Accessibility • Do not sell or share my personal information
                 </p>
-              </div>
-
-              {/* Right Footer */}
-              <div className="pt-1 md:pr-[10px]">
-                <p className="text-[9px] text-[#0d0d0dcc] text-center font-inter md:items-center md:justify-center">
-                  Privacy Policy • Terms of Service • Sitemap • Accessibility •
-                  Do not sell or share my personal information
-                </p>
-                <p className="text-[10px] font-semibold text-[#0d0d0dcc] text-center font-inter md:items-center md:justify-center">
+                <p className="text-[10px] text-center font-semibold text-[#0d0d0dcc] font-inter">
                   © 2024 • Alphalete Athletics LLC • All Rights Reserved
                 </p>
               </div>
+             
+              <div className="lg:max-w-[50%]">
+                <h3 className="font-bold text-[13px]  text-[#0d0d0dcc] font-inter">
+                  Premium Workout Clothes & Athleisure
+                </h3>
+                <p className="text-[12px] text-[#0d0d0dcc] mt-2 font-inter">
+                  Experience the next level of comfort, style, and functionality with our premium athleisure collections designed for those who demand the best. Shop now!
+                </p>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -164,6 +272,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-
 

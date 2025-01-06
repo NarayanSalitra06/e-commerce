@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import ProductSlider from "./ProductSlider";
 import { filterImg } from "../../data/ProductFilter";
 import { ProductGrid } from "../features/ProductGrid";
+import Heading from "../common/Heading";
+import ToggleBtn from "../common/ToggleBtn";
 
 const ProductFilter: React.FC = () => {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
@@ -36,14 +38,14 @@ const ProductFilter: React.FC = () => {
 
   return (
     <>
-      <div className="h-full w-full flex flex-col lg:flex-row relative bg-white">
+      <div className="h-full w-full flex flex-col lg:flex-row relative">
         {/* Product Slider */}
         <div className="w-full lg:w-full">
           <ProductSlider data={filterImg} />
         </div>
 
         {/* Filter Section */}
-        <div className="w-full lg:w-1/4 bg-white shadow-lg lg:p-6 sm:h-auto sm:overflow-visible md:h-[60vh] lg:h-[80vh] lg:absolute lg:right-10 lg:top-32 rounded-lg border-[#0d0d0d33] border border-solid border-opacity-60 lg:overflow-y-auto lg:z-20 hide-scrollbar">
+        <div className="w-full lg:w-1/4 bg-white shadow-lg lg:p-0 sm:h-auto sm:overflow-visible md:h-[60vh] lg:h-[80vh] lg:absolute lg:right-10 lg:top-32 rounded-lg border-[#0d0d0d33] border border-solid border-opacity-60 lg:overflow-y-auto lg:z-20 hide-scrollbar">
           {/* Responsive Layout for Filter Section */}
           <div className="grid gap-4 sm:grid-cols-1 md:mt-3 md:grid-cols-2 md:grid-rows-[auto_auto_auto] lg:block">
             {/* Image Cards Section - Col 2, Row 1 in MD */}
@@ -167,9 +169,20 @@ const ProductFilter: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-full">
+
+      <div className="ml-3 mr-3 ">
+        <div className="flex items-center justify-between ">
+          <Heading
+            upperText="You Might Also Like"
+            lowerText=""
+            upperStyle="text-[1.67vw] text-start mt-2 uppercase mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
+            lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-0.vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
+          />
+          </div>
+        <ToggleBtn buttons={["Recommended", "Recently Viewed"]} />
         <ProductGrid />
       </div>
+      
     </>
   );
 };

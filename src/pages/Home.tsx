@@ -8,36 +8,34 @@ import { filterdata, menFitnessdata, womenFitnessdata } from "../data/Header";
 import Filter from "../components/home/Filter";
 import Heading from "../components/common/Heading";
 import { TabularHome } from "../components/home/TabularHome";
-
+import ButtonLogo from "../components/common/BottomLogo";
 
 const Home: React.FC = () => {
   return (
     <div className="relative bg-white">
       <Banner />
       <Heading
-            upperText="Women's"
-            lowerText="Popular Right now "
-            upperStyle="text-[1.67vw] text-start mt-4 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
-            lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
-         />
+        upperText="Women's"
+        lowerText="Popular Right now "
+        upperStyle="text-[1.67vw] text-start mt-4 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
+        lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
+      />
 
       <SwiperSlider data={womenFitnessdata} />
-      
-       <TabularHome/>
 
-      
+      <TabularHome />
 
       <Filter data={filterdata}></Filter>
 
       <Heading
-            upperText="Men's"
-            lowerText="trending now"
-            upperStyle="text-[1.67vw] text-start mt-4 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
-            lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
-         />
+        upperText="Men's"
+        lowerText="trending now"
+        upperStyle="text-[1.67vw] text-start mt-4 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
+        lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
+      />
 
       <SwiperSlider data={menFitnessdata} />
-      
+
       <VideoComponent
         videoSrc="/home/video.mp4"
         smVideoSrc="/home/videomob.mp4"
@@ -45,6 +43,7 @@ const Home: React.FC = () => {
         subHeading="An oasis where individuals come to Learn More Dream More Be More."
         buttonText="Learn More"
       />
+      
     </div>
   );
 };

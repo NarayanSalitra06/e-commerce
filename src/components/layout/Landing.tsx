@@ -6,10 +6,10 @@ import ButtonLogo from "../common/BottomLogo";
 
 const Landing: React.FC = () => {
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       <Navbar />
       <Outlet />
-      <Footer />
+      <Footer /> 
       <ButtonLogo />
     </div>
   );
