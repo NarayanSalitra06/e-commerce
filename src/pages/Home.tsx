@@ -8,7 +8,6 @@ import { filterdata, menFitnessdata, womenFitnessdata } from "../data/Header";
 import Filter from "../components/home/Filter";
 import Heading from "../components/common/Heading";
 import { TabularHome } from "../components/home/TabularHome";
-import ButtonLogo from "../components/common/BottomLogo";
 
 const Home: React.FC = () => {
   return (
