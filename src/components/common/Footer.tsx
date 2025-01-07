@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white  w-full mb-[16vw] font-inter pt-0 border-t border-[#0d0d0d33] border-opacity-20  border-solid relative">
+    <footer className="bg-white  sm:mb-[12vw] w-full mb-[16vw] font-inter pt-0 border-t border-[#0d0d0d33] border-opacity-20  border-solid relative">
       {/* Main Container */}
       <div className="relative w-full border border-[#0d0d0d33] border-opacity-20 border-solid">
         <div className="flex flex-col lg:grid lg:grid-cols-[70%_30%] items-start w-full">
