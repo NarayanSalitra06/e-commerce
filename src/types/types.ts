@@ -114,11 +114,14 @@ export interface sideBarBtnSubCategary{
     subbtn?:string;
 }
 
-export interface sideBarBtnCategary{
-  btnName?:string,
-   btnAll?:string[]
+export interface sideBarBtnCategary {
+  btnName?: string;
+  btnAll?: string[];
 }
 
+export interface SideBarProps {
+  buttondata: sideBarBtnCategary[]; 
+}
 
 export interface ButtonProps {
   text: string;
@@ -146,3 +149,32 @@ export interface ProductImgProps{
   image:string;
   color:string
 }
+
+export interface subcategorieProduct3{
+  productName:string,
+  prodectPrize:number,
+  imgProductHover:string[];
+  productsMainImg:string[];
+  sameProductImg:string[];
+}
+
+export interface subcategorieProduct2{
+  mainImg:string,
+  numOfProduct:number,
+  products:subcategorieProduct3[]
+}
+export interface subcategorieProduct
+{
+  categaryName:string,
+  categaryLink:string,
+  productImg:string,
+  allProduct:subcategorieProduct2
+}
+
+export interface MenWomenCategaryProduct{
+  name:string,
+  products:subcategorieProduct[];
+}
+ export interface allCategaryProdect{
+  datas:MenWomenCategaryProduct
+ }

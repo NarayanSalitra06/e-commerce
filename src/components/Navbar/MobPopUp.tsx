@@ -4,7 +4,7 @@ import { categories, categories2 } from "../../data/Header";
 import { Categories } from "../../types/types";
 const MobPopUp: React.FC = () => {
   const [categoriestype, setCategoriestype] = useState<
-    categories | categories2
+  Categories | Categories
   >(categories);
 
   const handleOnMen = () => {

@@ -132,34 +132,38 @@ const Navbar: React.FC = () => {
       onMouseEnter={handlemarqueeColorWhite}
       onMouseLeave={handlemarqueeColor}
     >
-      <div className="flex sm:justify-between px-2 w-full justify-center items-center">
-        {!hideHeader && <VerticalMarquee bgclr={bgclr} />}
-        <div
-          className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
-          onMouseLeave={() => setHelpToggle(false)}
-        >
-          {threeButtons.map((item, index) => (
-            <button
-              key={index}
-              onMouseEnter={index === 0 ? () => setHelpToggle(true) : undefined}
-              className={`mx-1 ${
-                index === 1 ? "border-x border-black px-2" : ""
-              }`}
-            >
-              {item.buttonName}
-            </button>
-          ))}
-          {helpToggle && (
-            <div className="absolute bg-white shadow-lg p-3">
-              {helpButton.map((item, index) => (
-                <button key={index} className="block text-left w-full">
-                  {item.name}
-                </button>
-              ))}
-            </div>
-          )}
+      {!hideHeader && (
+        <div className="flex sm:justify-between px-2 w-full justify-center items-center">
+          <VerticalMarquee bgclr={bgclr} />
+          <div
+            className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
+            onMouseLeave={() => setHelpToggle(false)}
+          >
+            {threeButtons.map((item, index) => (
+              <button
+                key={index}
+                onMouseEnter={
+                  index === 0 ? () => setHelpToggle(true) : undefined
+                }
+                className={`mx-1 ${
+                  index === 1 ? "border-x border-black px-2" : ""
+                }`}
+              >
+                {item.buttonName}
+              </button>
+            ))}
+            {helpToggle && (
+              <div className="absolute bg-white shadow-lg p-3">
+                {helpButton.map((item, index) => (
+                  <button key={index} className="block text-left w-full">
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="flex justify-between items-center p-[3vw] md:p-[1vw] border-t border-gray-300">
         <div className="flex gap-3">

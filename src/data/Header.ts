@@ -262,38 +262,44 @@ import type { Categories, Categories2, filterArr, sideBarBtnCategary, womenFitne
           },   
     ]
 
-    export const SideBardata:sideBarBtnCategary[]=[
-  {
-    btnName:"Short By:Featured",
-    btnAll:["feature","Seller","NewWest" ,"Price:Low-High","Price:High-Low"]
-  }, {
-    btnName:"Gender",
-    btnAll:["Unisex","Women"]
-  }, {
-    btnName:"Color",
-    btnAll:[  "#000000", // black
-      "#008000", // green
-      "#FFFF00", // yellow
-      "#FFC0CB", // pink
-      "#800080", // purple
-      "#FFA500", // orange
-      "#FFFFFF", // white
-      "#A52A2A", // brown
-      "#0000FF"  // blue
-      ,
-      ]
-  }, {
-    btnName:"Size",
-    btnAll:["XS","S","M" ,"L","XL","2XL","3XL"]
-  }, {
-    btnName:"Fit",
-    btnAll:["Boxy","Compression","OverSize" ,"Relaxed","Slim"]
-  }, {
-    btnName:" Product Type",
-    btnAll:["Longsleeve","Matching Set","Pump Color" ,"Shit","Top"]
-  }, {
-    btnName:"Collection",
-    btnAll:["AirTech","origin","Power" ,"SeamLess","Zero"]
-  },
-
-    ]
+    export const SideBardata: sideBarBtnCategary[] = [
+      {
+        btnName: "Short By: Featured",
+        btnAll: ["Feature", "Seller", "Newest", "Price: Low-High", "Price: High-Low"],
+      },
+      {
+        btnName: "Gender",
+        btnAll: ["Unisex", "Women"],
+      },
+      {
+        btnName: "Color",
+        btnAll: [
+          "#000000", // Black
+          "#008000", // Green
+          "#FFFF00", // Yellow
+          "#FFC0CB", // Pink
+          "#800080", // Purple
+          "#FFA500", // Orange
+          "#FFFFFF", // White
+          "#A52A2A", // Brown
+          "#0000FF", // Blue
+        ],
+      },
+      {
+        btnName: "Size",
+        btnAll: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      },
+      {
+        btnName: "Fit",
+        btnAll: ["Boxy", "Compression", "Oversize", "Relaxed", "Slim"],
+      },
+      {
+        btnName: "Product Type",
+        btnAll: ["Longsleeve", "Matching Set", "Pump Color", "Shirt", "Top"],
+      },
+      {
+        btnName: "Collection",
+        btnAll: ["AirTech", "Origin", "Power", "Seamless", "Zero"],
+      },
+    ];
+    

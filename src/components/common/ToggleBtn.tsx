@@ -2,11 +2,8 @@ import React, { useState } from "react";
 interface button {
   buttons: string[];
 }
-interface width {
-  maxWd: number;
-}
 
-const ToggleBtn: React.FC<button | width> = ({ buttons, maxWd }) => {
+const ToggleBtn: React.FC<button> = ({ buttons }) => {
   const [bgIndex, setBgIndex] = useState<number | null>(0);
 
   const handleOnclick = (index: number) => {
@@ -18,7 +15,7 @@ const ToggleBtn: React.FC<button | width> = ({ buttons, maxWd }) => {
       <div
         className={`grid grid-cols-2 gap-2 lg:max-w-[24vw] max-w-[34vw] p-1  border-[2px] border-gray-600 rounded-[2vw] `}
       >
-        {buttons?.map((item, index) => (
+        {buttons?.map((item: string, index: number) => (
           <div>
             <div
               className={`flex justify-center items-center rounded-[2vw] w-full py-1 px-3 ${

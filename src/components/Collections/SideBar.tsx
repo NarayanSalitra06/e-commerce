@@ -1,23 +1,45 @@
 import { HiOutlinePlus } from "react-icons/hi";
 import React, { useState } from "react";
 import ToggleBtn from "../common/ToggleBtn";
-import { sideBarBtnCategary } from "../../types/types";
+import { sideBarBtnCategary, SideBarProps } from "../../types/types";
 import Heading from "../common/Heading";
 
-const SideBar: React.FC<sideBarBtnCategary> = ({ buttondata }) => {
+interface SideBar {
+  buttondata: SideBarProps;
+  categarynames?: string; // Optional if not always provided
+  noOfProduct?: number; // Optional if not always provided
+}
+
+const SideBar: React.FC<SideBar> = ({
+  buttondata,
+  categarynames,
+  noOfProduct,
+}) => {
   const [btnindex, setBtnindex] = useState<number | null>(null);
 
   const handleOnClickBtn = (index: number) => {
     setBtnindex(btnindex === index ? null : index);
   };
   return (
-    <div className="mx-[0.5vw]  ">
-      <div className="hidden sm:block  "></div>
+    <div className="m-[0.5vw]">
+      <div className="hidden sm:block px-[1vw] ">
+        <Heading
+          upperText={"women"}
+          lowerText={categarynames}
+          upperStyle={
+            " sm:text-[1.56vw] md:text-[1.56vw] lg:text-[0.7vw] text-start font-syncopate font-bold text-black"
+          }
+          lowerStyle={
+            "sm:text-[1.56vw] md:text-[1.56vw] lg:text-[1.5vw] text-start font-syncopate font-bold text-black"
+          }
+        ></Heading>
+        <div>{noOfProduct}</div>
+      </div>
       <div className="hidden lg:block  ">
         <ToggleBtn buttons={["Styles", "ColorsWays"]}></ToggleBtn>
       </div>
       <div className="flex flex-col justify-center items-center gap-1">
-        {buttondata.map((category, index) => (
+        {buttondata?.map((category: sideBarBtnCategary, index: number) => (
           <div key={index} className="w-full">
             <div
               className="flex justify-between items-center w-full border-b-2 border-black text-gray-800 h-[3vw] lg:py-[2.5vw] md:px-[1vw]
@@ -36,7 +58,7 @@ const SideBar: React.FC<sideBarBtnCategary> = ({ buttondata }) => {
                       : "flex-col"
                   } items-start justify-start py-[2vw]`}
                 >
-                  {category.btnAll?.map((item, idx) =>
+                  {category.btnAll?.map((item: string, idx: number) =>
                     index === 2 || index === 3 ? (
                       <div
                         key={idx}

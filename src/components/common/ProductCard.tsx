@@ -39,7 +39,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   // Current variant and its images
   const currentVariant = variants[selectedVariant];
   const currentImages = currentVariant.images;
-
+  hasAutoSlided;
   // Handlers
   const handleImageNavigation = (direction: "prev" | "next") => {
     setCurrentImageIndex((prev) => {
@@ -68,14 +68,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     }
   };
 
-  const handleMouseEnter = () => {
-    if (!hasAutoSlided && currentImages.length > 1) {
-      setTimeout(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % currentImages.length);
-        setHasAutoSlided(true);
-      }, 300);
-    }
-  };
+  // const handleMouseEnter = () => {
+  //   if (!hasAutoSlided && currentImages.length > 1) {
+  //     setTimeout(() => {
+  //       setCurrentImageIndex((prev) => (prev + 1) % currentImages.length);
+  //       setHasAutoSlided(true);
+  //     }, 300);
+  //   }
+  // };
 
   if (loading) {
     return (

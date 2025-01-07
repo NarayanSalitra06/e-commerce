@@ -1,34 +1,38 @@
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import Bras from "../components/Collections/Bras";
 import SideBar from "../components/Collections/SideBar";
 import { SideBardata } from "../data/Header";
 import ToggleBtn from "../components/common/ToggleBtn";
 import BottomDrawer from "../components/BottomDrawer";
 import Toggleshort from "../components/Collections/Toggleshort";
+import { MenWomenCategaryProduct, subcategorieProduct } from "../types/types";
+import { ProductGrid } from "../components/features/ProductGrid";
+import { useLocation } from "react-router-dom";
 
-const Collections: React.FC = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const [isSidebarFixed, setIsSidebarFixed] = useState(false);
-
-  const handleSideBar = () => {
-    setOpen(!open);
-  };
+const Collections: React.FC<MenWomenCategaryProduct> = () => {
+  const location = useLocation();
+  const list = location.state || {};
+  // Receiving the state
+  console.log("productList", list);
 
   return (
     <div className="bg-white">
       <div className="h-[500px] bg-blue-400">
-        <img src="" alt="" />
+        <img src={list.allProduct.mainImg} alt="" />
       </div>
 
       <div className=" flex items-start">
         <div className=" lg:flex lg:flex-col  hidden w-[20vw] sticky lg:top-[5vw]">
-          <SideBar buttondata={SideBardata}></SideBar>
+          <SideBar
+            buttondata={SideBardata}
+            categarynames={list.categaryName}
+            noOfProduct={list.allProduct.numOfProduct}
+          ></SideBar>
         </div>
 
         {/* Main Content Area */}
         <div className="flex-1  w-full lg:px-[2vw]">
-          <Bras />
+          <ProductGrid />
         </div>
       </div>
 

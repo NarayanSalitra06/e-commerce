@@ -16,6 +16,7 @@ const ProductFilter: React.FC = () => {
     section3: false,
   });
 
+  bag;
   const uniqueColors = filterImg.map((item) => ({
     color: item.color,
     image: item.image,

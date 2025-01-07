@@ -2,10 +2,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Pagination } from "swiper/modules";
+
 import { filterArr } from "../../types/types";
-import "swiper/css";
-import "swiper/css/pagination";
 
 const Filter: React.FC<{ data: filterArr[] }> = ({ data }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

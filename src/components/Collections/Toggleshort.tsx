@@ -1,9 +1,7 @@
 import { BsFillGridFill } from "react-icons/bs";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
-import { MdWindow } from "react-icons/md";
+
 import React, { useState } from "react";
-import Heading from "./Heading";
-import Button from "./Button";
 
 const Toggleshort: React.FC = () => {
   const [bgIndex, setBgIndex] = useState<boolean>(false);

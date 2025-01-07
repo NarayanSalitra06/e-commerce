@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 interface MarqueeItem {
   id: number;
@@ -16,38 +16,35 @@ const marqueeData: MarqueeItem[] = [
 ];
 
 const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
-  console.log(bgclr, "ccc");
   const containerHeight = 25; // Adjust to match the text size
   const pauseDuration = 2000; // Pause duration in milliseconds
   const scrollDuration = 1000; // Scroll duration in milliseconds
 
-  const marqueeRef = useRef<HTMLDivElement>(null);
-  const [isResetting, setIsResetting] = useState(false);
+  const marqueeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const scrollMarquee = () => {
-      if (marqueeRef.current) {
-        if (isResetting) return;
+      if (!marqueeRef.current) return;
 
-        // Smooth scroll
-        marqueeRef.current.style.transition = `transform ${scrollDuration}ms`;
-        marqueeRef.current.style.transform = `translateY(-${containerHeight}px)`;
+      // Smooth scroll
+      marqueeRef.current.style.transition = `transform ${scrollDuration}ms`;
+      marqueeRef.current.style.transform = `translateY(-${containerHeight}px)`;
 
-        // After scrolling one item, move items up
-        setTimeout(() => {
-          marqueeRef.current?.appendChild(
-            marqueeRef.current?.firstElementChild as Node
-          );
-          marqueeRef.current.style.transition = "none";
-          marqueeRef.current.style.transform = "translateY(0)";
-        }, scrollDuration);
-      }
+      // After scrolling one item, reset position
+      setTimeout(() => {
+        if (!marqueeRef.current) return;
+        marqueeRef.current.appendChild(
+          marqueeRef.current.firstElementChild as Node
+        );
+        marqueeRef.current.style.transition = "none";
+        marqueeRef.current.style.transform = "translateY(0)";
+      }, scrollDuration);
     };
 
     const interval = setInterval(scrollMarquee, pauseDuration + scrollDuration);
 
     return () => clearInterval(interval);
-  }, [isResetting, pauseDuration, scrollDuration, containerHeight]);
+  }, [pauseDuration, scrollDuration, containerHeight]);
 
   return (
     <div
@@ -75,29 +72,22 @@ const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
               fontSize: "16px",
               height: `${containerHeight}px`,
               lineHeight: `${containerHeight}px`,
-              transition: "color 0.3s, background-color 0.3s", // Smooth transition
-              color: bgclr === "black" ? "white" : "black", // Set text color based on bgclr
+              color: bgclr === "black" ? "white" : "black", // Dynamic text color
+              transition: "color 0.3s",
             }}
-            className="marquee-text"
+            onMouseEnter={(e) => {
+              (e.target as HTMLParagraphElement).style.color =
+                bgclr === "black" ? "white" : "black";
+            }}
+            onMouseLeave={(e) => {
+              (e.target as HTMLParagraphElement).style.color =
+                bgclr === "black" ? "white" : "black";
+            }}
           >
             {item.text}
           </p>
         ))}
       </div>
-      <style>
-        {`
-          .marquee-text {
-            background-color: transparent; /* Default background is transparent */
-          }
-
-          .marquee-text:hover {
-            color: ${
-              bgclr === "black" ? "white" : "black"
-            }; /* Change text color on hover */
-            background-color: transparent; /* Keep the background transparent on hover */
-          }
-        `}
-      </style>
     </div>
   );
 };
