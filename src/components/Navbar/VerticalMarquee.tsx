@@ -94,10 +94,11 @@ const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
           .marquee-text:hover {
             color: ${
               bgclr === "black" ? "white" : "black"
-            }; /* Change text color on hover */
-            background-color: transparent; /* Keep the background transparent on hover */
+            } ;  Change text color on hover 
+            background-color: transparent; 
           }
-        `}
+            
+          ` }
       </style>
     </div>
   );

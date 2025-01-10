@@ -45,15 +45,15 @@ const ProductFilter: React.FC = () => {
         </div>
 
         {/* Filter Section */}
-        <div className="w-full lg:w-1/4 bg-white shadow-lg lg:p-0 sm:h-auto sm:overflow-visible md:h-[60vh] lg:h-[80vh] lg:absolute lg:right-10 lg:top-32 rounded-lg border-[#0d0d0d33] border border-solid border-opacity-60 lg:overflow-y-auto lg:z-20 hide-scrollbar">
+        <div className="w-full lg:w-1/4 bg-white shadow-lg lg:p-0 sm:h-auto sm:overflow-visible md:h-[60vh] lg:h-[75vh] lg:absolute lg:right-10 lg:top-32 rounded-lg border-[#0d0d0d33] border border-solid border-opacity-60 lg:overflow-y-auto lg:z-20 hide-scrollbar">
           {/* Responsive Layout for Filter Section */}
           <div className="grid gap-4 sm:grid-cols-1 md:mt-3 md:grid-cols-2 md:grid-rows-[auto_auto_auto] lg:block">
             {/* Image Cards Section - Col 2, Row 1 in MD */}
-            <div className="order-1 md:col-start-2 md:row-start-1 lg:order-none">
+            <div className="order-1 md:col-start-2 md:row-start-1 lg:order-none ml-3 mr-4">
               <h3 className="font-bold text-lg mb-2 lg:block hidden">
                 Available Colors ({uniqueColors.length})
               </h3>
-              <div className="border lg:p-4 rounded-lg">
+              <div className="border lg:p-0 rounded-lg">
                 <div className="flex gap-1 flex-wrap">
                   {uniqueColors.map(({ color, image }, index) => (
                     <div
@@ -166,6 +166,7 @@ const ProductFilter: React.FC = () => {
                 )
               )}
             </div>
+
           </div>
         </div>
       </div>
@@ -178,11 +179,10 @@ const ProductFilter: React.FC = () => {
             upperStyle="text-[1.67vw] text-start mt-2 uppercase mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
             lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-0.vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
           />
-          </div>
+        </div>
         <ToggleBtn buttons={["Recommended", "Recently Viewed"]} />
         <ProductGrid />
       </div>
-      
     </>
   );
 };
