@@ -1,18 +1,18 @@
 import { HiOutlinePlus } from "react-icons/hi";
 import React, { useState } from "react";
 import ToggleBtn from "../common/ToggleBtn";
-import { sideBarBtnCategary, SideBarProps } from "../../types/types";
+import { sideBarBtnCategary } from "../../types/types";
 import Heading from "../common/Heading";
 
 interface SideBar {
-  buttondata: SideBarProps;
+  buttondata: sideBarBtnCategary[];
   categarynames?: string; // Optional if not always provided
   noOfProduct?: number; // Optional if not always provided
 }
 
 const SideBar: React.FC<SideBar> = ({
   buttondata,
-  categarynames,
+ 
   noOfProduct,
 }) => {
   const [btnindex, setBtnindex] = useState<number | null>(null);
@@ -21,11 +21,11 @@ const SideBar: React.FC<SideBar> = ({
     setBtnindex(btnindex === index ? null : index);
   };
   return (
-    <div className="m-[0.5vw]">
+    <div className="m-[0.5vw] bg-white">
       <div className="hidden sm:block px-[1vw] ">
         <Heading
           upperText={"women"}
-          lowerText={categarynames}
+          lowerText={"BRA"}
           upperStyle={
             " sm:text-[1.56vw] md:text-[1.56vw] lg:text-[0.7vw] text-start font-syncopate font-bold text-black"
           }

@@ -11,9 +11,9 @@ const Toggleshort: React.FC = () => {
   };
 
   return (
-    <div className="w-[20vw]">
+    <div className=" w-[15vw]">
       <div
-        className={`flex  justify-between items-center max-w-[18vw] gap-2 h-[7vh]  border-[2px] border-gray-600 rounded-full `}
+        className={`flex  justify-between items-center max-w-[18vw] gap-2  h-[5vh] p-[0.5vw] border-[2px] border-gray-600 rounded-full `}
       >
         <div
           className={`${

@@ -3,11 +3,11 @@ import Banner from "../components/home/Banner";
 
 import VideoComponent from "../components/home/VideoComponent";
 import SwiperSlider from "../components/home/SwiperSlider";
-import { filterdata, menFitnessdata } from "../data/Header";
+import { filterdata } from "../data/Header";
 import Filter from "../components/home/Filter";
 import Heading from "../components/common/Heading";
 import { TabularHome } from "../components/home/TabularHome";
-import { menAllproduct, WomenAllProduct } from "../data/WomenAllProduct";
+import { WomenAllProduct } from "../data/WomenAllProduct";
 
 const Home: React.FC = () => {
   return (
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
       />
 
-      <SwiperSlider datas={menAllproduct} />
+      <SwiperSlider datas={WomenAllProduct} />
 
       <VideoComponent
         videoSrc="/home/video.mp4"

@@ -1,11 +1,11 @@
 import React from "react";
-import Bras from "../components/Collections/Bras";
+
 import SideBar from "../components/Collections/SideBar";
 import { SideBardata } from "../data/Header";
 import ToggleBtn from "../components/common/ToggleBtn";
 import BottomDrawer from "../components/BottomDrawer";
 import Toggleshort from "../components/Collections/Toggleshort";
-import { MenWomenCategaryProduct, subcategorieProduct } from "../types/types";
+import { MenWomenCategaryProduct } from "../types/types";
 import { ProductGrid } from "../components/features/ProductGrid";
 import { useLocation } from "react-router-dom";
 
@@ -17,11 +17,11 @@ const Collections: React.FC<MenWomenCategaryProduct> = () => {
 
   return (
     <div className="bg-white">
-      <div className="h-[500px] bg-blue-400">
-        <img src={list.allProduct.mainImg} alt="" />
+      <div className="h-[400px] w-full">
+        <img src={list.allProduct.mainImg} alt="" className="h-[48vh] w-full" />
       </div>
 
-      <div className=" flex items-start">
+      <div className=" flex items-start bg-white">
         <div className=" lg:flex lg:flex-col  hidden w-[20vw] sticky lg:top-[5vw]">
           <SideBar
             buttondata={SideBardata}
@@ -38,7 +38,7 @@ const Collections: React.FC<MenWomenCategaryProduct> = () => {
 
       {/* Mobile Toggle Button */}
       <div className="  gap-2 lg:hidden w-full">
-        <div className="col-span-1  fixed left-[2vw] bottom-[2vw]">
+        <div className="col-span-1  sm:hidden fixed left-[2vw] bottom-[2vw]">
           <Toggleshort></Toggleshort>
         </div>
         <div className="col-span-1 fixed left-[30vw] bottom-[2vw]">

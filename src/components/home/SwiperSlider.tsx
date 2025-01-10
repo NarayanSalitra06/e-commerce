@@ -10,7 +10,7 @@ import Button from "../common/Button";
 import { Link } from "react-router-dom";
 
 // Import required modules
-// import { Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 const SwiperSlider: React.FC<allCategaryProdect> = ({ datas }) => {
   console.log("SwiperSlider data:", datas); // Debugging log
@@ -22,6 +22,7 @@ const SwiperSlider: React.FC<allCategaryProdect> = ({ datas }) => {
           pagination={{
             clickable: true,
           }}
+          modules={[Pagination]}
           breakpoints={{
             // When the viewport is 640px or less
             500: {

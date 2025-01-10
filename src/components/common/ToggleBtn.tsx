@@ -11,7 +11,7 @@ const ToggleBtn: React.FC<button> = ({ buttons }) => {
   };
 
   return (
-    <div className="">
+    <div className="bg-white">
       <div
         className={`grid grid-cols-2 gap-2 lg:max-w-[24vw] max-w-[34vw] p-1  border-[2px] border-gray-600 rounded-[2vw] `}
       >

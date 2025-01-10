@@ -161,7 +161,7 @@ export interface subcategorieProduct3{
 export interface subcategorieProduct2{
   mainImg:string,
   numOfProduct:number,
-  products:subcategorieProduct3[]
+  products: subcategorieProduct3[]
 }
 export interface subcategorieProduct
 {
