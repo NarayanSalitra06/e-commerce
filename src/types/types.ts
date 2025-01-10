@@ -178,3 +178,4 @@ export interface MenWomenCategaryProduct{
  export interface allCategaryProdect{
   datas:MenWomenCategaryProduct
  }
+ 
