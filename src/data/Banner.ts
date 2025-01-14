@@ -6,8 +6,8 @@ export  const items = [
         text: {
           upperText: "NEW",
           lowerText: "ARRIVALS",
-          upperStyle: " sm:text-[1.56vw] md:text-[1.56vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          upperStyle: " text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
 
@@ -17,8 +17,8 @@ export  const items = [
         text: {
           upperText: "TIMELESS",
           lowerText: "STAPLES",
-          upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          upperStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
     
@@ -28,8 +28,8 @@ export  const items = [
       text: {
         upperText:"BEST",
         lowerText: "SELLERS",
-        upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-        lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        upperStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        lowerStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
       },
     }, 
   ];
@@ -42,8 +42,8 @@ export  const mobileItems = [
         text: {
           upperText: "NEW",
           lowerText: "ARRIVALS",
-          upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          upperStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
 
@@ -53,8 +53,8 @@ export  const mobileItems = [
         text: {
           upperText: "TIMELESS",
           lowerText: "STAPLES",
-          upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-          lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          upperStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+          lowerStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
         },
       },
     
@@ -64,8 +64,8 @@ export  const mobileItems = [
       text: {
         upperText:"BEST",
         lowerText: "SELLERS",
-        upperStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
-        lowerStyle: "sm:text-[1.56vw] md:text-[1.56vw] text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        upperStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
+        lowerStyle: "text-[5.42vw] md:text-[5.42vw] lg:text-[1.56vw] text-start font-syncopate font-bold text-[#ffffff]",
       },
     }, 
   ];

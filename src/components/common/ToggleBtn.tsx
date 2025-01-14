@@ -14,9 +14,9 @@ const ToggleBtn: React.FC<button | width> = ({ buttons, maxWd }) => {
   };
 
   return (
-    <div className="">
+    <div className="pl-2">
       <div
-        className={`grid grid-cols-2 gap-2 lg:max-w-[24vw] max-w-[34vw] p-1 cursor-pointer border-[2px] border-gray-600 rounded-[2vw] `}
+        className={`grid grid-cols-2 gap-2 lg:max-w-[24vw] max-w-[34vw] p-1 cursor-pointer border-[2px] border-gray-600  rounded-[2vw] `}
       >
         {buttons?.map((item, index) => (
           <div>

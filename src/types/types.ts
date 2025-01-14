@@ -146,3 +146,50 @@ export interface ProductImgProps{
   image:string;
   color:string
 }
+
+//filter props
+export interface ColorOption {
+  color: string;
+  image: string;
+}
+
+export interface SizeOption {
+  size: string;
+  available: boolean;
+}
+
+export interface ProductDetails {
+  name: string;
+  price: string;
+  description: string;
+  colors: ColorOption[];
+}
+
+export interface AdditionalSection {
+  title: string;
+  content: string[];
+}
+
+export interface SwiperData {
+  color: string;
+  image: string;
+}
+
+export interface ProductFilterProps {
+  swiperData: SwiperData[];
+  productDetails: ProductDetails;
+  sizeOptions: SizeOption[];
+  additionalSections: AdditionalSection[];
+  onAddToBag: (color: string | null, size: string | null) => void;
+ nAddToBag: (color: string, size: string) => void;
+}
+
+export interface CircularTextSpinnerProps {
+  innerText?: string;
+  outerText?: string;
+  centerText?: string;
+  size?: number;
+  color?: string;
+  speed?: number;
+  centerTextSize?: number;
+}

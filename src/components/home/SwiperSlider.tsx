@@ -16,7 +16,7 @@ const SwiperSlider: React.FC<womenFitnessObject> = ({ data }) => {
   console.log("SwiperSlider data:", data); // Debugging log
   return (
     <>
-      <div className="w-full  py-8">
+      <div className="w-full  pt-8 pb-2">
         <Swiper
           spaceBetween={15}
           pagination={{

@@ -67,7 +67,7 @@ const Banner: React.FC = () => {
 
             {/* Overlay Text */}
             <div className="absolute bottom-10 flex flex-col items-start justify-start w-full bg-opacity-50 p-4">
-              <p className="leading-none text-center mb-4">
+              <p className="leading-none text-center mb-2">
                 <Heading
                   upperText={item.text.upperText}
                   lowerText={item.text.lowerText}
