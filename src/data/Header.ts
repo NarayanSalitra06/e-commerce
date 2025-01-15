@@ -136,129 +136,129 @@ import type { Categories, Categories2, filterArr, sideBarBtnCategary, womenFitne
       ];
       export const filterdata: filterArr[] = [
         {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img9.1.webp?updatedAt=1736870195988",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img9.webp?updatedAt=1736870195637",
         },
         {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img8.1.webp?updatedAt=1736870195574",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img8.webp?updatedAt=1736870194821",
           },
           {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img7.webp?updatedAt=1736870194167",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img7.1.webp?updatedAt=1736870193807",
           },
           {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img6.webp?updatedAt=1736870193145",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img6.1.webp?updatedAt=1736870192841",
           },
           {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img5.webp?updatedAt=1736870192912",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img5.1.webp?updatedAt=1736870190933",
           },
           {
-            img1:"/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img4.webp?updatedAt=1736870190899",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img4.1.webp?updatedAt=1736870191096",
           },
           {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img3.1.webp?updatedAt=1736870190646",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img3.webp?updatedAt=1736870190811",
           },
           {
-            img1:"/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img2.webp?updatedAt=1736870189954",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img2.1.webp?updatedAt=1736870189243",
           },
           {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img19.1.webp?updatedAt=1736870189100",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img19.webp?updatedAt=1736870188736",
           },
           {
-            img1: "/filter/img1.webp",
-            img2:"/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img17.1.webp?updatedAt=1736870186511",
+            img2:"https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img17.webp?updatedAt=1736870187046",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img18.1.webp?updatedAt=1736870186286",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img18.webp?updatedAt=1736870188314",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img16.webp?updatedAt=1736870186622p",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img16.1.webp?updatedAt=1736870185808",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img15.webp?updatedAt=1736870186276",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img15.1.webp?updatedAt=1736870185359",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img14.webp?updatedAt=1736870184863",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img14.1.webp?updatedAt=1736870184550",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img13.jpg?updatedAt=1736870184176",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img13.1.webp?updatedAt=1736870182017",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img12.1.webp?updatedAt=1736870181247",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img12.webp?updatedAt=1736870182189",
           },
           {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img11.webp?updatedAt=1736870181113",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img11.1.webp?updatedAt=1736870180533",
           }, {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img1.webp?updatedAt=1736870180635",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img1.2.webp?updatedAt=1736870179850",
           }, {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img10.1.webp?updatedAt=1736870180054",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/img10.webp?updatedAt=1736870180437",
           }, {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/35.webp?updatedAt=1736870179066",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/35.1.webp?updatedAt=1736870177984",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/34.webp?updatedAt=1736870176889",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/34.1.webp?updatedAt=1736870176991",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/33.webp?updatedAt=1736870176620",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/33.1.webp?updatedAt=1736870176229",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/32.webp?updatedAt=1736870176397",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/32.1.webp?updatedAt=1736870176015",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/31.webp?updatedAt=1736870175720",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/31.1.webp?updatedAt=1736870175753",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/30.webp?updatedAt=1736870174642",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/30.1.webp?updatedAt=1736870174162",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/29.webp?updatedAt=1736870172510",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/29.1.webp?updatedAt=1736870172316",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/28.webp?updatedAt=1736870172386",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/28.1.webp?updatedAt=1736870171308",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/26.webp?updatedAt=1736870172056",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/26.1.webp?updatedAt=1736870171785",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/27.1.webp?updatedAt=1736870171834",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/27.webp?updatedAt=1736870171265",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/25.webp?updatedAt=1736870170408",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/25.1.webp?updatedAt=1736870169286",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/24.webp?updatedAt=1736870168368",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/24.1.webp?updatedAt=1736870167983",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/23.webp?updatedAt=1736870167738",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/23.1.webp?updatedAt=1736870167736",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/22.webp?updatedAt=1736870167311",
+            img2: "/https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/22.1.webp?updatedAt=1736870167371",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/21.webp?updatedAt=1736870167083",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/21.1.webp?updatedAt=1736870166827",
           },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
-          },  {
-            img1: "/filter/img1.webp",
-            img2: "/filter/img2.webp",
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/20.webp?updatedAt=1736870165932",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/20.2.webp?updatedAt=1736870165087",
+          },{
+            img1: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/23.webp?updatedAt=1736870167738",
+            img2: "https://ik.imagekit.io/7phi74j9v/ShopImage/Section3/Women/23.1.webp?updatedAt=1736870167736",
           },   
     ]
 
