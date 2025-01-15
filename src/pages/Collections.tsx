@@ -4,12 +4,12 @@ import SideBar from "../components/Collections/SideBar";
 import { SideBardata } from "../data/Header";
 import ToggleBtn from "../components/common/ToggleBtn";
 import BottomDrawer from "../components/BottomDrawer";
-import Toggleshort from "../components/Collections/Toggleshort";
-import { MenWomenCategaryProduct } from "../types/types";
+
+// import { MenWomenCategaryProduct } from "../types/types";
 import { ProductGrid } from "../components/features/ProductGrid";
 import { useLocation } from "react-router-dom";
 
-const Collections: React.FC<MenWomenCategaryProduct> = () => {
+const Collections: React.FC= () => {
   const location = useLocation();
   const list = location.state || {};
   // Receiving the state

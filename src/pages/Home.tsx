@@ -3,10 +3,11 @@ import Banner from "../components/home/Banner";
 
 import VideoComponent from "../components/home/VideoComponent";
 import SwiperSlider from "../components/home/SwiperSlider";
-import { filterdata } from "../data/Header";
+import { filterdata, womenFitnessdata } from "../data/Header";
 import Filter from "../components/home/Filter";
 import Heading from "../components/common/Heading";
 import { TabularHome } from "../components/home/TabularHome";
+import { WomenAllProduct } from "../data/WomenAllProduct";
 
 const Home: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Home: React.FC = () => {
         lowerStyle="text-[4.33vw]  lg:text-[1.56vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
       />
 
-      <SwiperSlider data={womenFitnessdata} />
+      <SwiperSlider datas={WomenAllProduct} />
 
       <TabularHome />
 
@@ -41,7 +42,6 @@ const Home: React.FC = () => {
         subHeading="An oasis where individuals come to Learn More Dream More Be More."
         buttonText="Learn More"
       />
-      
     </div>
   );
 };

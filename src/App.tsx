@@ -12,10 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
-          <Route
-            path="/collections"
-            element={<Collections name={""} products={[]} />}
-          />
+          <Route path="/collections" element={<Collections />} />
           <Route path="/slider" element={<ProductFilter />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/slider" element={<ProductFilter />} />
