@@ -145,11 +145,7 @@ const Navbar: React.FC = () => {
           hideHeader ? "hidden" : "block"
         } flex sm:justify-between px-2 w-full justify-center items-center`}
       >
-        {hideHeader ? (
-          <VerticalMarquee bgclr={bgclr} />
-        ) : (
-          <VerticalMarquee bgclr={bgclr} />
-        )}
+        {!hideHeader && <VerticalMarquee bgclr={bgclr} />}
         <div
           className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
           onMouseLeave={() => setHelpToggle(false)}
