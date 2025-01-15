@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { AiOutlinePlus } from "react-icons/ai";
 import React, { useState } from "react";
 // Import Swiper React components
@@ -7,6 +8,7 @@ import { filterArr } from "../../types/types";
 
 const Filter: React.FC<{ data: filterArr[] }> = ({ data }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [hoveredIndex2, setHoveredIndex2] = useState<number | null>(null);
 
   const handleMouseEnter = (index: number) => {

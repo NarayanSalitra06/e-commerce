@@ -6,6 +6,7 @@ import PopUp from "./PopUp";
 import MobPopUp from "./MobPopUp";
 import VerticalMarquee from "./VerticalMarquee";
 import { categories, categories2 } from "../../data/Header";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface HelpButton {
   name: string;
@@ -26,6 +27,11 @@ const Navbar: React.FC = () => {
   const [startY, setStartY] = useState(0);
   const [hideHeader, setHideHeader] = useState(false);
   const [bgclr, setBgclr] = useState("black");
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const signinpage = location.pathname.includes("/signin");
+  const signuppage = location.pathname.includes("/register");
 
   const helpButton: HelpButton[] = [
     { name: "Help Center" },
@@ -126,48 +132,64 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`hover:bg-white hover:text-black   fixed w-full top-0 z-50 ${
-        hideHeader ? "bg-white text-black" : "text-white "
+      className={`hover:bg-white hover:text-black fixed w-full top-0 z-50 ${
+        signinpage ? "!text-black" : ""
+      } ${hideHeader ? "bg-white text-black" : "text-white"} ${
+        signuppage ? "!text-black" : ""
       }`}
       onMouseEnter={handlemarqueeColorWhite}
       onMouseLeave={handlemarqueeColor}
     >
-      {!hideHeader && (
-        <div className="flex sm:justify-between px-2 w-full justify-center items-center">
+      <div
+        className={`${
+          hideHeader ? "hidden" : "block"
+        } flex sm:justify-between px-2 w-full justify-center items-center`}
+      >
+        {hideHeader ? (
           <VerticalMarquee bgclr={bgclr} />
-          <div
-            className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
-            onMouseLeave={() => setHelpToggle(false)}
-          >
-            {threeButtons.map((item, index) => (
-              <button
-                key={index}
-                onMouseEnter={
-                  index === 0 ? () => setHelpToggle(true) : undefined
-                }
-                className={`mx-1 ${
-                  index === 1 ? "border-x border-black px-2" : ""
-                }`}
-              >
-                {item.buttonName}
-              </button>
-            ))}
-            {helpToggle && (
-              <div className="absolute bg-white shadow-lg p-3">
-                {helpButton.map((item, index) => (
-                  <button key={index} className="block text-left w-full">
-                    {item.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+        ) : (
+          <VerticalMarquee bgclr={bgclr} />
+        )}
+        <div
+          className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
+          onMouseLeave={() => setHelpToggle(false)}
+        >
+          {threeButtons.map((item, index) => (
+            <button
+              key={index}
+              onMouseEnter={index === 0 ? () => setHelpToggle(true) : undefined}
+              onClick={
+                item.buttonName === "Sign In"
+                  ? () => navigate("/signin")
+                  : undefined
+              }
+              className={`mx-1 ${
+                index === 1 ? "border-x border-black px-2" : ""
+              }`}
+            >
+              {item.buttonName}
+            </button>
+          ))}
+          {helpToggle && (
+            <div className="absolute bg-white shadow-lg p-3">
+              {helpButton.map((item, index) => (
+                <button key={index} className="block text-left w-full">
+                  {item.name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      </div>
 
       <div className="flex justify-between items-center p-[3vw] md:p-[1vw] border-t border-gray-300">
         <div className="flex gap-3">
-          <h1 className="md:font-bold font-extrabold">ALPHALETE</h1>
+          <h1
+            className="md:font-bold font-extrabold cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            ALPHALETE
+          </h1>
           <div className="sm:flex sm:gap-3 hidden">
             <div onMouseEnter={handleMen} className="cursor-pointer">
               Men

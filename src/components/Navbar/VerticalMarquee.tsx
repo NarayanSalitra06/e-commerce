@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useEffect, useRef, useState } from "react";
 
 interface MarqueeItem {
   id: number;
@@ -88,6 +89,21 @@ const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
           </p>
         ))}
       </div>
+      <style>
+        {`
+          .marquee-text {
+            background-color: transparent; /* Default background is transparent */
+          }
+
+          .marquee-text:hover {
+            color: ${
+              bgclr === "black" ? "white" : "black"
+            } ;  Change text color on hover 
+            background-color: transparent; 
+          }
+            
+          `}
+      </style>
     </div>
   );
 };

@@ -204,7 +204,7 @@ const defaultProductProps: Omit<ProductCardProps, "theme"> = {
 
 export const ProductGrid: React.FC<ProductGridProps> = ({
   itemsPerPage = 5,
-  totalItems = 50,
+  totalItems = 20,
 }) => {
   const [items, setItems] = useState<(ProductCardProps & { key: number })[]>(
     []
@@ -265,13 +265,13 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   }, []);
 
   return (
-    <div className="min-h-screen bg-white  p-6">
-      <div className="container mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+    <div className="min-h-screen w-full bg-white  p-6">
+      <div className="container w-full mx-auto">
+        {/* <h1 className="text-3xl font-bold text-gray-900 mb-8">
           Product Catalog
-        </h1>
+        </h1> */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:w-full lg:grid-cols-5 xl:grid-cols-4 gap-6">
           {items.map((item, index) => (
             <div
               key={item.key}

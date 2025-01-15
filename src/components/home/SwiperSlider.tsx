@@ -1,5 +1,5 @@
 import React from "react";
-// Import Swiper React components
+//  Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -16,7 +16,7 @@ const SwiperSlider: React.FC<allCategaryProdect> = ({ datas }) => {
   console.log("SwiperSlider data:", datas); // Debugging log
   return (
     <>
-      <div className="w-full  py-8">
+      <div className="w-full  pt-8 pb-2">
         <Swiper
           spaceBetween={15}
           pagination={{
