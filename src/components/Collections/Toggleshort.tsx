@@ -11,14 +11,14 @@ const Toggleshort: React.FC = () => {
   };
 
   return (
-    <div className=" w-[15vw]">
+    <div className=" w-[20vw] h-[10vw]">
       <div
-        className={`flex  justify-between items-center max-w-[18vw] gap-2  h-[5vh] p-[0.5vw] border-[2px] border-gray-600 rounded-full `}
+        className={`flex  justify-between items-center max-w-[30vw] gap-1  h-[5vh]  border-[2px] border-gray-600 rounded-[8vw] `}
       >
         <div
           className={`${
             bgIndex && "bg-gray-600"
-          } w-full h-full flex justify-center items-center  rounded-full`}
+          } w-full h-full flex justify-center items-center  rounded-[10vw]`}
           onClick={handleOnclick}
         >
           <BsFillGridFill className="w-[4vw] h-[4vw]" />

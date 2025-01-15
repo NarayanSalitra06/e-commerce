@@ -126,8 +126,8 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`hover:bg-white hover:text-black fixed w-full top-0 z-50 ${
-        hideHeader ? "bg-white text-black" : "md:text-white"
+      className={`hover:bg-white hover:text-black   fixed w-full top-0 z-50 ${
+        hideHeader ? "bg-white text-black" : "text-white "
       }`}
       onMouseEnter={handlemarqueeColorWhite}
       onMouseLeave={handlemarqueeColor}

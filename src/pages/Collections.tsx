@@ -38,11 +38,14 @@ const Collections: React.FC<MenWomenCategaryProduct> = () => {
 
       {/* Mobile Toggle Button */}
       <div className="  gap-2 lg:hidden w-full">
-        <div className="col-span-1  sm:hidden fixed left-[2vw] bottom-[2vw]">
+        {/* <div className="col-span-1  sm:hidden fixed left-[2vw] bottom-[2vw]">
           <Toggleshort></Toggleshort>
-        </div>
+        </div> */}
         <div className="col-span-1 fixed left-[30vw] bottom-[2vw]">
-          <ToggleBtn buttons={["Styles", "ColorsWays"]}></ToggleBtn>
+          <ToggleBtn
+            buttons={["Styles", "ColorsWays"]}
+            style="grid grid-cols-2 gap-1  max-w-[40vw]  text-[3vw] h-[50px]   font-semibold border-[2px] border-gray-600 rounded-[2vw]"
+          ></ToggleBtn>
         </div>
         <div className=" col-span-1">
           <BottomDrawer />

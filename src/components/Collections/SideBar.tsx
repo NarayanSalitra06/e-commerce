@@ -12,7 +12,7 @@ interface SideBar {
 
 const SideBar: React.FC<SideBar> = ({
   buttondata,
- 
+
   noOfProduct,
 }) => {
   const [btnindex, setBtnindex] = useState<number | null>(null);
@@ -36,7 +36,10 @@ const SideBar: React.FC<SideBar> = ({
         <div>{noOfProduct}</div>
       </div>
       <div className="hidden lg:block  ">
-        <ToggleBtn buttons={["Styles", "ColorsWays"]}></ToggleBtn>
+        <ToggleBtn
+          buttons={["Styles", "ColorsWays"]}
+          style="grid grid-cols-2 gap-1  max-w-[40vw]  text-[12px] h-[40px]   font-semibold border-[2px] border-gray-600 rounded-[2vw]"
+        ></ToggleBtn>
       </div>
       <div className="flex flex-col justify-center items-center gap-1">
         {buttondata?.map((category: sideBarBtnCategary, index: number) => (
