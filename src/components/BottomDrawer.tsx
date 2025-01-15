@@ -6,24 +6,18 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { grey } from "@mui/material/colors";
 
 import Box from "@mui/material/Box";
-// import Skeleton from "@mui/material/Skeleton";
-// import Typography from "@mui/material/Typography";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import SideBar from "./Collections/SideBar";
 import { SideBardata } from "../data/Header";
 
-const drawerBleeding = 0;
+const drawerHeight = "75vh";
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
 const Root = styled("div")(({ theme }) => ({
-  height: "100%",
+  height: drawerHeight,
   backgroundColor: grey[100],
   ...theme.applyStyles("dark", {
     backgroundColor: theme.palette.background.default,
@@ -31,6 +25,7 @@ const Root = styled("div")(({ theme }) => ({
 }));
 
 const StyledBox = styled("div")(({ theme }) => ({
+  height: drawerHeight,
   backgroundColor: "#fff",
   ...theme.applyStyles("dark", {
     backgroundColor: grey[800],
@@ -58,7 +53,6 @@ export default function BottomDrawer(props: Props) {
     setOpen(newOpen);
   };
 
-  // This is used only for the example
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
@@ -68,29 +62,27 @@ export default function BottomDrawer(props: Props) {
       <Global
         styles={{
           ".MuiDrawer-root > .MuiPaper-root": {
-            height: `calc(80% - ${drawerBleeding}px)`,
-            overflow: "visible",
+            height: drawerHeight,
+            overflow: "hidden",
           },
         }}
       />
       <Box
         sx={{
-          position: "fixed", // Fix the button at the bottom
+          position: "fixed",
           bottom: 10,
-          right: 30, // Position it at the bottom of the viewport
-          width: "8%", // Ensure it spans the full width
+          right: 50,
+          width: "8vw",
           bgcolor: "white",
-
-          textAlign: "center", // Center the button horizontally
-          zIndex: 100, // Ensure it appears above other content
+          textAlign: "center",
+          zIndex: 100,
           borderRadius: 100,
           padding: 0.2,
         }}
       >
-        <div className="flex  justify-center items-center ">
-          {" "}
+        <div className="flex justify-center items-center">
           <GiHamburgerMenu
-            className="text-2xl   sm:h-[6vw] h-[10vw] sm:w-[6vw] w-[10vw] "
+            className="text-2xl  rounded-md h-[6vh]  w-[15vw]"
             onClick={toggleDrawer(true)}
           />
         </div>
@@ -101,27 +93,21 @@ export default function BottomDrawer(props: Props) {
         open={open}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
-        swipeAreaWidth={drawerBleeding}
-        disableSwipeToOpen={true}
+        disableSwipeToOpen
         ModalProps={{
           keepMounted: true,
         }}
       >
         <StyledBox
           sx={{
-            position: "fixed",
-            top: -drawerBleeding,
             borderTopLeftRadius: 8,
             borderTopRightRadius: 8,
             visibility: "visible",
-            right: 0,
-            left: 0,
+            height: drawerHeight,
           }}
         >
           <Puller />
-          <div>
-            <SideBar buttondata={SideBardata}></SideBar>
-          </div>
+          <SideBar buttondata={SideBardata} />
         </StyledBox>
       </SwipeableDrawer>
     </Root>

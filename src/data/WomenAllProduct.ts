@@ -9,7 +9,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     categaryLink:"/Collections",
     productImg:"/womenpopular/bra.webp",
     allProduct:{
-        mainImg:"/menpopular/pants.webp",
+        mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shortsmain.webp?updatedAt=1736870164046",
         numOfProduct:314,
         products:[{
             productName:"Amplify Gemini Bra",
@@ -43,7 +43,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     categaryLink:"/Collections",
     productImg:"/womenpopular/shorts2.webp",
     allProduct:{
-        mainImg:"/menpopular/pants.webp",
+        mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shortsmain.webp?updatedAt=1736870164046",
         numOfProduct:31,
         products:[{
             productName:"EssentialMesh Short",
@@ -77,7 +77,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     categaryLink:"/Collections",
     productImg:"/womenpopular/legging2.webp",
     allProduct:{
-        mainImg:"/menpopular/pants.webp",
+        mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shirtsmain.webp?updatedAt=1736870163103",
         numOfProduct:3149,
         products:[{
             productName:"Amplify Legging",
@@ -143,7 +143,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     categaryLink:"/Collections",
     productImg:"/womenpopular/shirts.webp",
     allProduct:{
-        mainImg:"/menpopular/pants.webp",
+        mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shirts.webp?updatedAt=1736870162993",
         numOfProduct:3149,
         products:[{
             productName:"Baby tee",

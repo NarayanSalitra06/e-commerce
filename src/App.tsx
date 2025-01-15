@@ -14,8 +14,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/slider" element={<ProductFilter />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/slider" element={<ProductFilter />} />
+
           <Route path="/signin" element={<SignInForm />} />
           <Route path="/register" element={<SignUpForm />} />
         </Route>
