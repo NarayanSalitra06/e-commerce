@@ -114,14 +114,11 @@ export interface sideBarBtnSubCategary{
     subbtn?:string;
 }
 
-export interface sideBarBtnCategary {
-  btnName?: string;
-  btnAll?: string[];
+export interface sideBarBtnCategary{
+  btnName?:string,
+   btnAll?:string[]
 }
 
-export interface SideBarProps {
-  buttondata: sideBarBtnCategary[]; 
-}
 
 export interface ButtonProps {
   text: string;
@@ -150,12 +147,15 @@ export interface ProductImgProps{
   color:string
 }
 
-export interface subcategorieProduct3{
-  productName:string,
-  prodectPrize:number,
-  imgProductHover:string[];
-  productsMainImg:string[];
-  sameProductImg:string[];
+//filter props
+export interface ColorOption {
+  color: string;
+  image: string;
+}
+
+export interface SizeOption {
+  size: string;
+  available: boolean;
 }
 
 export interface subcategorieProduct2{
@@ -171,11 +171,21 @@ export interface subcategorieProduct
   allProduct:subcategorieProduct2
 }
 
-export interface MenWomenCategaryProduct{
-  name:string,
-  products:subcategorieProduct[];
-}
- export interface allCategaryProdect{
-  datas:MenWomenCategaryProduct
- }
+export interface ProductFilterProps {
+  swiperData: SwiperData[];
+  productDetails: ProductDetails;
+  sizeOptions: SizeOption[];
+  additionalSections: AdditionalSection[];
+  onAddToBag: (color: string | null, size: string | null) => void;
  
+}
+
+export interface CircularTextSpinnerProps {
+  innerText?: string;
+  outerText?: string;
+  centerText?: string;
+  size?: number;
+  color?: string;
+  speed?: number;
+  centerTextSize?: number;
+}
