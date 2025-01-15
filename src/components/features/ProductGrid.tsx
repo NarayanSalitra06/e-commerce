@@ -6,6 +6,7 @@ import type {
   ProductVariant,
   ProductCardProps,
 } from "../../types/types";
+import { useNavigate } from "react-router-dom";
 
 const defaultThemes: ThemeColors[] = [
   {
@@ -213,6 +214,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   const [hasMore, setHasMore] = useState(true);
   const observer = useRef<IntersectionObserver | null>(null);
   const lastElementRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
 
   const generateItems = (startIndex: number, count: number) => {
     return Array.from({ length: count }, (_, index) => ({
@@ -264,6 +266,9 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
     loadMoreItems();
   }, []);
 
+  const handleOnclick = () => {
+    navigate("/slider");
+  };
   return (
     <div className="min-h-screen w-full bg-white  p-6">
       <div className="container w-full mx-auto">
@@ -277,6 +282,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               key={item.key}
               ref={index === items.length - 1 ? lastElementRef : null}
               className="flex justify-center"
+              onClick={handleOnclick}
             >
               <ProductCard {...item} />
             </div>

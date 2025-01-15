@@ -9,7 +9,7 @@ import BottomDrawer from "../components/BottomDrawer";
 import { ProductGrid } from "../components/features/ProductGrid";
 import { useLocation } from "react-router-dom";
 
-const Collections: React.FC= () => {
+const Collections: React.FC = () => {
   const location = useLocation();
   const list = location.state || {};
   // Receiving the state
@@ -17,8 +17,8 @@ const Collections: React.FC= () => {
 
   return (
     <div className="bg-white">
-      <div className="h-[400px] w-full">
-        <img src={list.allProduct.mainImg} alt="" className="h-[48vh] w-full" />
+      <div className="h-[50vh] w-full">
+        <img src={list.allProduct.mainImg} alt="" className="h-[50vh] w-full" />
       </div>
 
       <div className=" flex items-start bg-white">
@@ -31,7 +31,7 @@ const Collections: React.FC= () => {
         </div>
 
         {/* Main Content Area */}
-        <div className="flex-1  w-full lg:px-[2vw]">
+        <div className="flex-1  w-full">
           <ProductGrid />
         </div>
       </div>
@@ -44,7 +44,7 @@ const Collections: React.FC= () => {
         <div className="col-span-1 fixed left-[30vw] bottom-[2vw]">
           <ToggleBtn
             buttons={["Styles", "ColorsWays"]}
-            style="grid grid-cols-2 gap-1  max-w-[40vw]  text-[3vw] h-[50px]   font-semibold border-[2px] border-gray-600 rounded-[2vw]"
+            style="grid grid-cols-2 gap-1  max-w-[40vw]  text-[2vw] h-[5vh]   font-medium p-[2px] border-[2px] border-gray-600 rounded-[2vw]"
           ></ToggleBtn>
         </div>
         <div className=" col-span-1">
