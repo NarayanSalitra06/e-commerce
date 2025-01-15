@@ -33,7 +33,7 @@ const SideBar: React.FC<SideBar> = ({
             "sm:text-[1.56vw] md:text-[1.56vw] lg:text-[1.5vw] text-start font-syncopate font-bold text-black"
           }
         ></Heading>
-        <div>{noOfProduct}</div>
+        <div className="font-bold">{noOfProduct}</div>
       </div>
       <div className="hidden lg:block  ">
         <ToggleBtn
@@ -41,11 +41,11 @@ const SideBar: React.FC<SideBar> = ({
           style="grid grid-cols-2 gap-1  max-w-[40vw]  text-[12px] h-[40px]   font-semibold border-[2px] border-gray-600 rounded-[2vw]"
         ></ToggleBtn>
       </div>
-      <div className="flex flex-col justify-center items-center gap-1">
+      <div className="flex flex-col justify-center items-center ">
         {buttondata?.map((category: sideBarBtnCategary, index: number) => (
           <div key={index} className="w-full">
             <div
-              className="flex justify-between items-center w-full border-b-2 border-black text-gray-800 h-[3vw] lg:py-[2.5vw] md:px-[1vw]
+              className="flex justify-between items-center w-full border-b-2 border-black text-gray-800 h-[2vw] lg:py-[2vw] md:px-[1vw]
              py-[4vw] font-semibold"
             >
               <button>{category.btnName}</button>

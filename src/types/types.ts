@@ -118,7 +118,6 @@ export interface sideBarBtnCategary {
   btnName?: string;
   btnAll?: string[];
 }
-
 export interface SideBarProps {
   buttondata: sideBarBtnCategary[]; 
 }
@@ -179,3 +178,53 @@ export interface MenWomenCategaryProduct{
   datas:MenWomenCategaryProduct
  }
  
+
+
+
+
+
+ export interface ColorOption {
+  color: string;
+  image: string;
+}
+
+export interface SizeOption {
+  size: string;
+  available: boolean;
+}
+
+export interface ProductDetails {
+  name: string;
+  price: string;
+  description: string;
+  colors: ColorOption[];
+}
+
+export interface AdditionalSection {
+  title: string;
+  content: string[];
+}
+
+export interface SwiperData {
+  color: string;
+  image: string;
+}
+
+export interface ProductFilterProps {
+  swiperData: SwiperData[];
+  productDetails: ProductDetails;
+  sizeOptions: SizeOption[];
+  additionalSections: AdditionalSection[];
+  onAddToBag: (color: string | null, size: string | null) => void;
+ 
+}
+
+export interface CircularTextSpinnerProps {
+  innerText?: string;
+  outerText?: string;
+  centerText?: string;
+  size?: number;
+  color?: string;
+  speed?: number;
+  centerTextSize?: number;
+}

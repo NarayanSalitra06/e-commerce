@@ -3,7 +3,7 @@ import Banner from "../components/home/Banner";
 
 import VideoComponent from "../components/home/VideoComponent";
 import SwiperSlider from "../components/home/SwiperSlider";
-import { filterdata, womenFitnessdata } from "../data/Header";
+import { filterdata } from "../data/Header";
 import Filter from "../components/home/Filter";
 import Heading from "../components/common/Heading";
 import { TabularHome } from "../components/home/TabularHome";
