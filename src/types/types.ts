@@ -181,7 +181,7 @@ export interface ProductFilterProps {
   sizeOptions: SizeOption[];
   additionalSections: AdditionalSection[];
   onAddToBag: (color: string | null, size: string | null) => void;
- nAddToBag: (color: string, size: string) => void;
+ 
 }
 
 export interface CircularTextSpinnerProps {
