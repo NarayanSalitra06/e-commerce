@@ -6,7 +6,7 @@ import type {
   ProductVariant,
   ProductCardProps,
 } from "../../types/types";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const defaultThemes: ThemeColors[] = [
   {
