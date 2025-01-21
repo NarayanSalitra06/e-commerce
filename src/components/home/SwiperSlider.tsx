@@ -16,7 +16,7 @@ const SwiperSlider: React.FC<allCategaryProdect> = ({ datas }) => {
   console.log("SwiperSlider data:", datas); // Debugging log
   return (
     <>
-      <div className="w-full  pt-8 pb-2">
+      <div className="w-full pl-[1vw] pt-8 pb-2">
         <Swiper
           spaceBetween={15}
           pagination={{
@@ -26,7 +26,7 @@ const SwiperSlider: React.FC<allCategaryProdect> = ({ datas }) => {
           breakpoints={{
             // When the viewport is 640px or less
             500: {
-              slidesPerView: 2, // For larger screens
+              slidesPerView: 1.5, // For larger screens
             },
             // Default for smaller screens
             0: {

@@ -17,8 +17,12 @@ const Collections: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div className="h-[50vh] w-full">
-        <img src={list.allProduct.mainImg} alt="" className="h-[50vh] w-full" />
+      <div className="h-[60vh]  w-full mt-[]">
+        <img
+          src={list.allProduct.mainImg}
+          alt=""
+          className="h-full w-[100vw]"
+        />
       </div>
 
       <div className=" flex items-start bg-white">
