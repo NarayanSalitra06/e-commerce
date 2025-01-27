@@ -11,7 +11,7 @@ import { menAllproduct, WomenAllProduct } from "../data/WomenAllProduct";
 
 const Home: React.FC = () => {
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-white overflow-x-hidden">
       <Banner />
       <Heading
         upperText="Women's"

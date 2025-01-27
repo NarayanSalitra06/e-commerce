@@ -2,10 +2,10 @@ import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { womenFitnessObject } from "../../types/types";
+import { swiper} from "../../types/types";
 
 
-const ProductSlider: React.FC<womenFitnessObject> = ({ data }) => {
+const ProductSlider: React.FC<swiper> = ({ data }) => {
 
   return (
     <div className="w-full h-full py-0">
@@ -26,7 +26,7 @@ const ProductSlider: React.FC<womenFitnessObject> = ({ data }) => {
             slidesPerView: 2.5, // For larger screens
           },
           1200: {
-            slidesPerView: 3.5, // For larger screens
+            slidesPerView: 2.5, // For larger screens
           },
         }}
         className="mySwiper"
@@ -35,7 +35,7 @@ const ProductSlider: React.FC<womenFitnessObject> = ({ data }) => {
           <SwiperSlide key={index} className="overflow-hidden relative">
             <img
               className="transition-all duration-1000 scale-105 h-[60vh] lg:h-[100vh]  w-[100vw]"
-              src={item?.image}
+              src={item?.images}
               alt=""
             />
           </SwiperSlide>

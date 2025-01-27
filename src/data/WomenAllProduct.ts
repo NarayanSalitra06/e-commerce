@@ -6,7 +6,7 @@ import { MenWomenCategaryProduct } from "../types/types";
   name:"Women",
   products:[{
     categaryName:"Bra",
-    categaryLink:"/Collections",
+    categaryLink:"/collections",
     productImg:"/womenpopular/bra.webp",
     allProduct:{
         mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shortsmain.webp?updatedAt=1736870164046",
@@ -40,7 +40,7 @@ import { MenWomenCategaryProduct } from "../types/types";
   },
   {
     categaryName:"Short",
-    categaryLink:"/Collections",
+    categaryLink:"/collections",
     productImg:"/womenpopular/shorts2.webp",
     allProduct:{
         mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shortsmain.webp?updatedAt=1736870164046",
@@ -74,7 +74,7 @@ import { MenWomenCategaryProduct } from "../types/types";
   },
   {
     categaryName:"Leggings",
-    categaryLink:"/Collections",
+    categaryLink:"/collections",
     productImg:"/womenpopular/legging2.webp",
     allProduct:{
         mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shirtsmain.webp?updatedAt=1736870163103",
@@ -107,7 +107,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     }
   },{
     categaryName:"Hoodies",
-    categaryLink:"/Collections",
+    categaryLink:"/collections",
     productImg:"/womenpopular/hoodies.webp",
     allProduct:{
         mainImg:"/menpopular/pants.webp",
@@ -140,7 +140,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     }
   },{
     categaryName:"Shirts",
-    categaryLink:"/Collections",
+    categaryLink:"/collections",
     productImg:"/womenpopular/shirts.webp",
     allProduct:{
         mainImg:"https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shirts.webp?updatedAt=1736870162993",
@@ -173,7 +173,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     }
   },{
     categaryName:"SweatPatns",
-    categaryLink:"/Collections",
+    categaryLink:"/collections",
     productImg:"/womenpopular/sweatpants.webp",
     allProduct:{
         mainImg:"/menpopular/pants.webp",
@@ -210,7 +210,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     name:"Men",
     products:[{
       categaryName:"Shirt",
-      categaryLink:"/Collections",
+      categaryLink:"/collections",
       productImg:"/menpopular/shirts.webp",
       allProduct:{
           mainImg:"/menpopular/pants.webp",
@@ -244,7 +244,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     },
     {
       categaryName:"Short",
-      categaryLink:"/Collections",
+      categaryLink:"/collections",
       productImg:"/menpopular/shorts.webp",
       allProduct:{
           mainImg:"/menpopular/pants.webp",
@@ -278,7 +278,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     },
     {
       categaryName:"pants",
-      categaryLink:"/Collections",
+      categaryLink:"/collections",
       productImg:"/menpopular/pants.webp",
       allProduct:{
           mainImg:"/menpopular/pants.webp",
@@ -311,7 +311,7 @@ import { MenWomenCategaryProduct } from "../types/types";
       }
     },{
       categaryName:"Tanks",
-      categaryLink:"/Collections",
+      categaryLink:"/collections",
       productImg:"/menpopular/tanks.webp",
       allProduct:{
           mainImg:"/menpopular/pants.webp",
@@ -344,7 +344,7 @@ import { MenWomenCategaryProduct } from "../types/types";
       }
     },{
       categaryName:"Hoodies",
-      categaryLink:"/Collections",
+      categaryLink:"/collections",
       productImg:"/menpopular/hoodies.webp",
       allProduct:{
           mainImg:"/menpopular/pants.webp",
@@ -378,7 +378,7 @@ import { MenWomenCategaryProduct } from "../types/types";
     },
     {
       categaryName:"WorkOut",
-      categaryLink:"/Collections",
+      categaryLink:"/collections",
       productImg:"/menpopular/workout.webp",
       allProduct:{
           mainImg:"/menpopular/pants.webp",

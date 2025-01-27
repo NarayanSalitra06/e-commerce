@@ -13,12 +13,13 @@ const Button: React.FC<ButtonProps> = ({
   const handleClick = () => {
     if (isExternal) {
       // Open external link in the same tab
-      const externalUrl = navigateTo.startsWith("http://") || navigateTo.startsWith("https://")
-        ? navigateTo
-        : `https://${navigateTo}`;
-      window.location.href = externalUrl; 
+      const externalUrl =
+        navigateTo.startsWith("http://") || navigateTo.startsWith("https://")
+          ? navigateTo
+          : `https://${navigateTo}`;
+      window.location.href = externalUrl;
     } else {
-      navigate(navigateTo); 
+      navigate(navigateTo);
     }
   };
 
@@ -33,4 +34,3 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
-

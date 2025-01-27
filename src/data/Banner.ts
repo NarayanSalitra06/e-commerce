@@ -2,7 +2,7 @@ export  const items = [
     
     {
         type: "video",
-        src: "/home/videobanner.mp4",
+        src: "https://ik.imagekit.io/7phi74j9v/ShopImage/Banner/videobanner.mp4?updatedAt=1736870236652",
         text: {
           upperText: "NEW",
           lowerText: "ARRIVALS",
@@ -13,7 +13,7 @@ export  const items = [
 
       {
         type: "image",
-        src: "/home/img2.webp",
+        src: "https://ik.imagekit.io/7phi74j9v/ShopImage/Banner/img2.webp?updatedAt=1736870228520",
         text: {
           upperText: "TIMELESS",
           lowerText: "STAPLES",
@@ -24,7 +24,7 @@ export  const items = [
     
     {
       type: "image",
-      src: "/home/img1.webp",
+      src: "https://ik.imagekit.io/7phi74j9v/ShopImage/Banner/img1.webp?updatedAt=1736870228197",
       text: {
         upperText:"BEST",
         lowerText: "SELLERS",
@@ -38,7 +38,7 @@ export  const mobileItems = [
     
     {
         type: "video",
-        src: "/home/mobVideobanner.mp4",
+        src: "https://ik.imagekit.io/7phi74j9v/ShopImage/Banner/mobVideobanner.mp4?updatedAt=1736870236158",
         text: {
           upperText: "NEW",
           lowerText: "ARRIVALS",
@@ -49,7 +49,7 @@ export  const mobileItems = [
 
       {
         type: "image",
-        src: "/home/main/banner2mob.jpg",
+        src: "https://ik.imagekit.io/7phi74j9v/ShopImage/Banner/banner2mob.jpg?updatedAt=1736870226645",
         text: {
           upperText: "TIMELESS",
           lowerText: "STAPLES",
@@ -60,7 +60,7 @@ export  const mobileItems = [
     
     {
       type: "image",
-      src: "/home/main/banner3mob.jpg",
+      src: "https://ik.imagekit.io/7phi74j9v/ShopImage/Banner/banner3mob.jpg?updatedAt=1736870228156",
       text: {
         upperText:"BEST",
         lowerText: "SELLERS",

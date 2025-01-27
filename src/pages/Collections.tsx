@@ -44,7 +44,7 @@ const Collections: React.FC = () => {
         <div className="col-span-1 fixed left-[30vw] bottom-[2vw]">
           <ToggleBtn
             buttons={["Styles", "ColorsWays"]}
-            style="grid grid-cols-2 gap-1  max-w-[40vw]  text-[2vw] h-[5vh]   font-medium p-[2px] border-[2px] border-gray-600 rounded-[2vw]"
+            style="grid grid-cols-2 gap-1  max-w-[40vw]   text-[2vw] h-[5vh]   font-medium p-[2px] border-[2px] border-gray-600 rounded-[2vw]"
           ></ToggleBtn>
         </div>
         <div className=" col-span-1">
