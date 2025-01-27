@@ -9,15 +9,16 @@ import SignUpForm from "./components/Auth/SignUpForm";
 function App() {
   return (
     <>
-      <Routes>
+      <Routes >
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/slider" element={<ProductFilter />} />
-
           <Route path="/signin" element={<SignInForm />} />
           <Route path="/register" element={<SignUpForm />} />
         </Route>
+
+        
       </Routes>
     </>
   );

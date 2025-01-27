@@ -416,8 +416,15 @@ export default {
 
       fontSize: {
         // for desktop
+        "9px-vw": "0.46vw",
+        "10px-vw": "0.52vw",
+        "11px-vw": "0.57vw",
+        "12px-vw": "0.65vw",
         "13px-vw": "0.67vw",
         "14px-vw": "0.73vw",
+        "15px-vw": "0.78vw",
+        "16px-vw": "0.83vw",
+        "17px-vw": "0.88vw",
         "18px-vw": "1vw",
         "16px-vw": "0.83vw",
         "32px-vw": "1.67vw",
@@ -441,7 +448,7 @@ export default {
 
 
       fontFamily: {
-        inter: ["Inter", "Helvetica", "sans-serif"],
+        inter: ['Inter', 'Helvetica', 'sans-serif'],
         syntos: ["Syntos", "Helvetica", "sans-serif"],
       },
       fontFamily: {

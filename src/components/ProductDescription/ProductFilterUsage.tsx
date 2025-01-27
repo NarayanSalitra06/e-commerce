@@ -1,146 +1,15 @@
-// /* eslint-disable @typescript-eslint/no-unused-vars */
-// import React, { useState } from "react";
-// import ProductSlider from "./ProductSlider";
-// import { ProductFilterProps } from "../../types/types";
 
-// const ProductFilterUsage: React.FC<ProductFilterProps> = ({
-//   swiperData,
-//   productDetails,
-//   sizeOptions,
-//   additionalSections,
-//   onAddToBag,
-// }) => {
-//   const [selectedColor, setSelectedColor] = useState<string | null>(null);
-//   const [selectedSize, setSelectedSize] = useState<string | null>(null);
-//   const [toggleSections, setToggleSections] = useState<{
-//     [key: string]: boolean;
-//   }>({});
-
-//   const toggleSection = (section: string) => {
-//     setToggleSections((prev) => ({ ...prev, [section]: !prev[section] }));
-//   };
-
-//   return (
-//     <div className="h-full w-full flex flex-col lg:flex-row relative">
-//       {/* Product Slider */}
-//       <div className="w-full lg:w-full">
-//         <ProductSlider data={swiperData} />
-//       </div>
-
-//       {/* Filter Section */}
-//       <div className="w-full lg:w-1/4 bg-white shadow-lg lg:p-0 sm:h-auto sm:overflow-visible md:h-[60vh] lg:h-[75vh] lg:absolute lg:right-10 lg:top-32 rounded-lg border-[#0d0d0d33] border border-solid border-opacity-60 lg:overflow-y-auto lg:z-20 hide-scrollbar">
-//         <div className="grid gap-4 sm:grid-cols-1 md:mt-3 md:grid-cols-2 md:grid-rows-[auto_auto_auto] lg:block">
-//           {/* Color Selection */}
-//           <div className="ml-3 mr-4">
-//             <h3 className="font-bold text-lg mb-2 lg:block hidden">
-//               Available Colors ({productDetails.colors.length})
-//             </h3>
-//             <div className="border lg:p-0 rounded-lg">
-//               <div className="flex gap-1 flex-wrap">
-//                 {productDetails.colors.map(({ color, image }, index) => (
-//                   <div
-//                     key={`${color}-${index}`}
-//                     className={`cursor-pointer rounded-md border ${
-//                       selectedColor === color ? "border-black" : "border-gray-300"
-//                     } bg-gray-400`}
-//                     onClick={() => setSelectedColor(color)}
-//                   >
-//                     <img
-//                       src={image}
-//                       alt={color}
-//                       className={`rounded-lg w-full h-20 object-cover bg-gray-500 ${
-//                         selectedColor === color ? "border-3 border-black" : ""
-//                       }`}
-//                     />
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Product Details */}
-//           <div className="ml-3 mr-4">
-//             <h2 className="text-1xl font-syncopate font-bold">
-//               {productDetails.name}
-//             </h2>
-//             <div className="flex w-full items-center justify-between mt-1">
-//               <h3 className="font-bold text-lg">{productDetails.price}</h3>
-//             </div>
-//             <p className="text-lg text-gray-600 mt-1">
-//               {productDetails.description}
-//             </p>
-//           </div>
-
-//           {/* Size Options */}
-//           <div className="mt-4 ml-3 mr-4">
-//             <h3 className="font-bold">Size</h3>
-//             <div className="flex gap-2 mt-2">
-//               {sizeOptions.map(({ size, available }) => (
-//                 <button
-//                   key={size}
-//                   disabled={!available}
-//                   className={`px-4 py-2 rounded ${
-//                     selectedSize === size
-//                       ? "bg-black text-white"
-//                       : available
-//                       ? "bg-gray-200"
-//                       : "bg-gray-300 cursor-not-allowed"
-//                   }`}
-//                   onClick={() => setSelectedSize(size)}
-//                 >
-//                   {size}
-//                 </button>
-//               ))}
-//             </div>
-//             {selectedSize && (
-//               <button
-//                 className="mt-6 w-full bg-black text-white py-2 rounded"
-//                 onClick={() => onAddToBag(selectedColor, selectedSize)}
-//               >
-//                 Add to Bag
-//               </button>
-//             )}
-//           </div>
-
-//           {/* Additional Sections */}
-//           <div className="ml-3 mr-4">
-//             {additionalSections.map((section, index) => (
-//               <div key={index} className="mt-6">
-//                 <div
-//                   className="flex justify-between items-center cursor-pointer"
-//                   onClick={() => toggleSection(section.title)}
-//                 >
-//                   <h3 className="font-bold">{section.title}</h3>
-//                   <span>{toggleSections[section.title] ? "x" : "+"}</span>
-//                 </div>
-//                 {toggleSections[section.title] && (
-//                   <ul className="mt-2 list-disc pl-4">
-//                     {section.content.map((item, i) => (
-//                       <li key={i}>{item}</li>
-//                     ))}
-//                   </ul>
-//                 )}
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProductFilterUsage;
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProductSlider from "./ProductSlider";
-// import Popup from "./Popup"; // Import the Popup component
-import { ProductFilterProps } from "../../types/types";
+import { Bell } from "lucide-react";
+import { ProductFilterProps, CategoryFilterType } from "../../types/types";
+import { categoryFilter, filterImg } from "../../data/ProductFilter";
+import VerticalSentenceSlider from "./VerticalSentenceSlider";
 
 const ProductFilterUsage: React.FC<ProductFilterProps> = ({
-  swiperData,
   productDetails,
   sizeOptions,
+  itemDetails,
   additionalSections,
   onAddToBag,
 }) => {
@@ -149,43 +18,49 @@ const ProductFilterUsage: React.FC<ProductFilterProps> = ({
   const [toggleSections, setToggleSections] = useState<{
     [key: string]: boolean;
   }>({});
-  // const [showPopup, setShowPopup] = useState<boolean>(false);
 
-  const toggleSection = (section: string) => {
-    setToggleSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  useEffect(() => {
+    const defaultColor = categoryFilter.find((filter: CategoryFilterType) =>
+      filterImg.some((img) => img.images === filter.image)
+    )?.color;
+    setSelectedColor(defaultColor || null);
+  }, []);
+
+  const toggleSection = (sectionKey: string) => {
+    setToggleSections((prevState) => ({
+      ...prevState,
+      [sectionKey]: !prevState[sectionKey],
+    }));
   };
 
   const handleSizeClick = (size: string, available: boolean) => {
     if (available) {
       setSelectedSize(size);
-    } else {
-      // setShowPopup(true);
     }
   };
-
-  // const handlePopupSubmit = (email: string) => {
-  //   alert(`You will be notified at ${email}`);
-  //   setShowPopup(false);
-  // };
 
   return (
     <div className="h-full w-full flex flex-col lg:flex-row relative">
       {/* Product Slider */}
       <div className="w-full lg:w-full">
-        <ProductSlider data={swiperData} />
+        <ProductSlider data={filterImg} />
       </div>
 
       {/* Filter Section */}
-      <div className="w-full lg:w-1/4 bg-white shadow-lg lg:p-0 sm:h-auto sm:overflow-visible md:h-[60vh] lg:h-[75vh] lg:absolute lg:right-10 lg:top-32 rounded-lg border-[#0d0d0d33] border border-solid border-opacity-60 lg:overflow-y-auto lg:z-20 hide-scrollbar">
-        <div className="grid gap-4 sm:grid-cols-1 md:mt-3 md:grid-cols-2 md:grid-rows-[auto_auto_auto] lg:block">
-          {/* Color Selection */}
-          <div className="ml-3 mr-4">
-            <h3 className="font-bold text-lg mb-2 lg:block hidden">
-              Available Colors ({productDetails.colors.length})
-            </h3>
-            <div className="border lg:p-0 rounded-lg">
+      <div className="w-full lg:w-1/4 bg-white  p-4 sm:h-auto md:h-[65vh] lg:h-[75vh] lg:absolute lg:right-10 lg:top-32 rounded-lg  lg:overflow-y-auto lg:z-20 hide-scrollbar">
+        {/* Small screens: Stack layout */}
+        <div className="block md:hidden">
+          {/* Color Selection First */}
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="font-semibold font-inter text-[14px] text-[#0D0D0D]">
+                {categoryFilter.length} Colors
+              </h3>
+              <span className="text-gray-600 font-semibold text-[14px] font-inter">{selectedColor}</span>
+            </div>
+            <div className="border rounded-lg">
               <div className="flex gap-1 flex-wrap">
-                {productDetails.colors.map(({ color, image }, index) => (
+                {categoryFilter.map(({ color, image }, index) => (
                   <div
                     key={`${color}-${index}`}
                     className={`cursor-pointer rounded-md border ${
@@ -196,7 +71,7 @@ const ProductFilterUsage: React.FC<ProductFilterProps> = ({
                     <img
                       src={image}
                       alt={color}
-                      className={`rounded-lg w-full h-20 object-cover`}
+                      className="rounded-lg w-full h-20 object-cover"
                     />
                   </div>
                 ))}
@@ -204,78 +79,154 @@ const ProductFilterUsage: React.FC<ProductFilterProps> = ({
             </div>
           </div>
 
-          {/* Product Details */}
-          <div className="ml-3 mr-4">
-            <h2 className="text-1xl font-syncopate font-bold">
-              {productDetails.name}
-            </h2>
-            <div className="flex w-full items-center justify-between mt-1">
-              <h3 className="font-bold text-lg">{productDetails.price}</h3>
-            </div>
-            <p className="text-lg text-gray-600 mt-1">
-              {productDetails.description}
-            </p>
-          </div>
-
-          {/* Size Options */}
-          <div className="mt-4 ml-3 mr-4">
-            <h3 className="font-bold">Size</h3>
-            <div className="flex gap-2 mt-2">
-              {sizeOptions.map(({ size, available }) => (
-                <button
-                  key={size}
-                  className={`px-4 py-2 rounded ${
-                    selectedSize === size
-                      ? "bg-black text-white"
-                      : available
-                      ? "bg-gray-200"
-                      : "bg-gray-300 cursor-not-allowed"
-                  }`}
-                  onClick={() => handleSizeClick(size, available)}
-                >
-                  {size}
-                </button>
-              ))}
-            </div>
-            <button
-              className="mt-6 w-full bg-black text-white py-2 rounded"
-              onClick={() => onAddToBag(selectedColor, selectedSize)}
-              disabled={!selectedSize}
-            >
-              {selectedSize ? "Add to Bag" : "Select Size"}
-            </button>
-          </div>
-
-          {/* Additional Sections */}
-          <div className="ml-3 mr-4">
-            {additionalSections.map((section, index) => (
-              <div key={index} className="mt-6">
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => toggleSection(section.title)}
-                >
-                  <h3 className="font-bold">{section.title}</h3>
-                  <span>{toggleSections[section.title] ? "x" : "+"}</span>
-                </div>
-                {toggleSections[section.title] && (
-                  <ul className="mt-2 list-disc pl-4">
-                    {section.content.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                )}
+          {/* Rest of the sections */}
+          <div className="space-y-4">
+            {/* Product Details */}
+            <div className="border-b pb-2">
+              <h2 className="text-[17px] text-[#0D0D0D] font-syncopate font-bold">
+                {productDetails.name}
+              </h2>
+              <div className="flex w-full items-center justify-between mt-1">
+                <span className="text-[#0D0D0D] font-bold text-[15px] font-inter">{selectedColor}</span>
+                <p className="text-[15px] font-inter font-bold">£{productDetails.price}</p>
               </div>
-            ))}
+              <p className="text-[14px] text-[#0D0D0D] font-medium opacity-70 font-inter mt-1">
+                {productDetails.description}
+              </p>
+              <div className="border font-bold rounded-[3px] uppercase mt-2 inline-block">
+                <p className="mr-1 ml-1 text-[#0D0D0DCC] text-[12px] font-inter">LOW IMPACT</p>
+              </div>
+            </div>
+
+            {/* Size, Additional Sections follow */}
+            {/* ... rest of the sections ... */}
+          </div>
+        </div>
+
+        {/* Medium and Large screens: Grid layout */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-1 gap-4">
+          {/* Left Column (md) / Single Column (lg) */}
+          <div className="md:row-span-1 lg:w-full">
+            {/* Product Details */}
+            <div className="border-b pb-2">
+              <h2 className="text-[17px] text-[#0D0D0D] font-syncopate font-bold">
+                {productDetails.name}
+              </h2>
+              <div className="flex w-full items-center justify-between mt-1">
+                <span className="text-[#0D0D0D] font-bold text-[15px] font-inter">{selectedColor}</span>
+                <p className="text-[15px] font-inter font-bold">£{productDetails.price}</p>
+              </div>
+              <p className="text-[14px] text-[#0D0D0D] font-medium opacity-70 font-inter mt-1">
+                {productDetails.description}
+              </p>
+              <div className="border font-bold rounded-[3px] uppercase mt-2 inline-block">
+                <p className="mr-1 ml-1 text-[#0D0D0DCC] text-[12px] font-inter">LOW IMPACT</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column (md) / Continue Single Column (lg) */}
+          <div className="md:space-y-4 lg:space-y-4">
+            {/* Color Selection */}
+            <div className="border-b pb-4">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-semibold font-inter text-[14px] text-[#0D0D0D]">
+                  {categoryFilter.length} Colors
+                </h3>
+                <span className="text-gray-600 font-semibold text-[14px] font-inter">{selectedColor}</span>
+              </div>
+              <div className="border rounded-lg">
+                <div className="flex gap-1 flex-wrap">
+                  {categoryFilter.map(({ color, image }, index) => (
+                    <div
+                      key={`${color}-${index}`}
+                      className={`cursor-pointer rounded-md border ${
+                        selectedColor === color ? "border-black" : "border-gray-300"
+                      }`}
+                      onClick={() => setSelectedColor(color)}
+                    >
+                      <img
+                        src={image}
+                        alt={color}
+                        className="rounded-lg w-full h-20 object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Size Options */}
+            <div className="border-b pb-4">
+              <h3 className="font-inter font-bold text-[14px] text-[#0D0D0D]">Size Guide</h3>
+              <div className="flex gap-2 mt-2">
+                {sizeOptions.map(({ size, available }) => (
+                  <div key={size} className="relative group">
+                    <button
+                      className={`px-4 py-2 rounded transition relative ${
+                        selectedSize === size
+                          ? "bg-black text-white"
+                          : available
+                          ? "text-black font-bold font-syncopate hover:bg-gray-500"
+                          : "text-gray-400"
+                      }`}
+                      onClick={() => handleSizeClick(size, available)}
+                      disabled={!available}
+                    >
+                      {size}
+                    </button>
+                    {!available && (
+                      <>
+                        <span className="absolute inset-0 flex items-center justify-center text-gray-400 text-xl font-bold opacity-100 group-hover:opacity-0 transition">
+                          -
+                        </span>
+                        <div className="absolute inset-0 bg-gray-300 rounded opacity-0 cursor-pointer group-hover:opacity-100 flex items-center justify-center transition">
+                          <Bell className="text-gray-600 bg-white rounded-full p-1 w-5 h-5" />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <button
+                className="mt-6 w-full bg-black text-white py-2 rounded-full"
+                onClick={() => onAddToBag(selectedColor, selectedSize)}
+              >
+                {selectedSize ? "Add to Bag" : "Select Size"}
+              </button>
+            </div>
+
+            {/* Additional Sections */}
+            <div>
+              <ul className="list-disc pl-4 font-inter text-[14px]">
+                {itemDetails.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+
+              {additionalSections.map((section, index) => (
+                <div key={index} className="mt-6">
+                  <div
+                    className="flex justify-between items-center cursor-pointer"
+                    onClick={() => toggleSection(`section${index + 1}`)}
+                  >
+                    <h3 className="font-bold font-inter text-[14px]">{section.title}</h3>
+                    <span>{toggleSections[`section${index + 1}`] ? "x" : "+"}</span>
+                  </div>
+                  {toggleSections[`section${index + 1}`] && (
+                    <ul className="mt-2 list-disc pl-4 text-[14px]">
+                      {section.content.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+              <VerticalSentenceSlider bgclr="white" />
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Popup for Unavailable Sizes
-      <Popup
-        show={showPopup}
-        onClose={() => setShowPopup(false)}
-        onSubmit={handlePopupSubmit}
-      /> */}
     </div>
   );
 };

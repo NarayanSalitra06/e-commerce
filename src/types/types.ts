@@ -131,7 +131,7 @@ export interface ButtonProps {
 
 export interface VideoComponentProps {
   videoSrc: string;
-  buttonText: string; // Expecting two words
+  buttonText: string; 
   subHeading: string;
   smVideoSrc:string,
   mdVideoSrc:string,
@@ -203,7 +203,7 @@ export interface ProductDetails {
   name: string;
   price: string;
   description: string;
-  colors: ColorOption[];
+  colors: { images: string }[];
 }
 
 export interface AdditionalSection {
@@ -211,19 +211,27 @@ export interface AdditionalSection {
   content: string[];
 }
 
-export interface SwiperData {
+export interface CategoryFilterType {
   color: string;
   image: string;
 }
 
+export interface SwiperData {
+  images: string;
+}
+
+export interface swiper{
+  data ?:SwiperData[];
+}
+
 export interface ProductFilterProps {
-  swiperData: SwiperData[];
   productDetails: ProductDetails;
   sizeOptions: SizeOption[];
+  itemDetails: string[];
   additionalSections: AdditionalSection[];
   onAddToBag: (color: string | null, size: string | null) => void;
- 
 }
+
 
 export interface CircularTextSpinnerProps {
   innerText?: string;

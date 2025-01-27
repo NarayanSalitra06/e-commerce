@@ -81,19 +81,19 @@ const Banner: React.FC = () => {
                 {item.type === "video" ? (
                   <Button
                     text="Shop Women"
-                    navigateTo="/shop-women"
+                    navigateTo="Collections"
                     buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                   />
                 ) : (
                   <>
                     <Button
                       text="Shop Women"
-                      navigateTo="/shop-women"
+                      navigateTo="Collections"
                       buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                     />
                     <Button
                       text="Shop Men"
-                      navigateTo="/shop-men"
+                      navigateTo="Collections"
                       buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                     />
                   </>

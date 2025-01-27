@@ -64,7 +64,7 @@ const SwiperSlider: React.FC<allCategaryProdect> = ({ datas }) => {
                   {/* Buttons */}
                   <Button
                     text="Shop"
-                    navigateTo="Collections"
+                    navigateTo="collections"
                     buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
                   />
                 </div>

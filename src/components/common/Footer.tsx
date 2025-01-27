@@ -1,11 +1,13 @@
 import React from "react";
 
+
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white mb-[12vw]  w-full  font-inter pt-0 border-t border-[#0d0d0d33] border-opacity-20  border-solid relative">
+    <>
+    <footer className="bg-white md:mb-[12vw] mb-[75vw]  w-full  font-inter pt-0 border-t border-[#0d0d0d33] border-opacity-20  border-solid relative overflow-y-hidden">
       {/* Main Container */}
       <div className="relative w-full border border-[#0d0d0d33] border-opacity-20 border-solid">
-        <div className="flex flex-col lg:grid lg:grid-cols-[70%_30%] items-start w-full">
+        <div className="flex flex-col lg:grid lg:grid-cols-[80%_20%] items-start w-full"> 
           {/* Right Container - Moved up for mobile */}
           <div className="w-full lg:border-l border-[#0d0d0d33] border-opacity-20 border-solid order-1 lg:order-2">
             <form className="p-8 lg:max-w-[300px]">
@@ -50,7 +52,7 @@ const Footer: React.FC = () => {
           <div className="w-full lg:border-r border-[#0d0d0d33] border-opacity-20 border-solid order-2 lg:order-1">
             {/* Links Container */}
             <div className="p-8 lg:pb-40 border-b border-[#0d0d0d33] border-opacity-20 border-solid">
-              <div className="lg:flex lg:space-x-32">
+              <div className="lg:flex lg:space-x-4">
                 {/* Help Section */}
                 <div>
                   <h3 className="font-bold mb-6 text-[#0d0d0d] text-[13px] font-inter">
@@ -123,29 +125,8 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Bottom Section */}
-            {/* <div className="p-8 lg:flex lg:justify-between items-start lg:border-r border-[#0d0d0d33] border-opacity-20 border-solid">
-            <div className="lg:text-left mt-4 lg:mt-0  ">
-                <p className="text-[9px] text-[#0d0d0dcc] mb-1 font-inter">
-                  Privacy Policy • Terms of Service • Sitemap • Accessibility • Do not sell or share my personal information
-                </p>
-                <p className="text-[10px] text-center font-semibold text-[#0d0d0dcc] font-inter">
-                  © 2024 • Alphalete Athletics LLC • All Rights Reserved
-                </p>
-              </div>
-             
-              <div className="lg:max-w-[50%] ml-4">
-                <h3 className="font-bold text-[13px]  text-[#0d0d0dcc] font-inter">
-                  Premium Workout Clothes & Athleisure
-                </h3>
-                <p className="text-[12px] text-[#0d0d0dcc] mt-2 font-inter">
-                  Experience the next level of comfort, style, and functionality with our premium athleisure collections designed for those who demand the best. Shop now!
-                </p>
-              </div>
-              
-            </div> */}
-
             <div className="p-8 lg:flex lg:justify-between items-start relative">
-              <div className="lg:text-left mt-4 lg:mt-0 lg:flex-1 lg:mr-2">
+              <div className="lg:text-left mt-4 lg:mt-0 lg:flex-1 lg:mr-1">
                 <p className="text-[9px] text-[#0d0d0dcc] mb-1 font-inter">
                   Privacy Policy • Terms of Service • Sitemap • Accessibility •
                   Do not sell or share my personal information
@@ -158,7 +139,7 @@ const Footer: React.FC = () => {
               {/* Divider in the center */}
               <div className="hidden lg:block  h-full w-[1px] bg-[#0d0d0d33] absolute left-1/2 top-0 transform -translate-x-1/2"></div>
 
-              <div className="lg:max-w-[50%] lg:flex-1 lg:pl-8">
+              <div className="lg:max-w-[60%] lg:flex-1 lg:pl-8">
                 <h3 className="font-bold text-[13px] text-[#0d0d0dcc] font-inter">
                   Premium Workout Clothes & Athleisure
                 </h3>
@@ -173,6 +154,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+   
+    </>
   );
 };
 
