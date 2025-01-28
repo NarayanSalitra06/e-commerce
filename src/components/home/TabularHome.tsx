@@ -23,7 +23,7 @@ export const TabularHome: React.FC = () => {
 
       <ToggleBtn
         buttons={["Women", "Men"]}
-        style="grid grid-cols-2 gap-1  max-w-[15vw] m-2  text-[12px] h-[40px] p-[3px]  font-bold border-[1px] border-gray-600 rounded-[2vw]"
+        style="inline-grid grid-cols-2 gap-2 cursor-pointer text-sm px-4 py-2 ml-2 font-semibold border border-gray-600 rounded-full"
       />
     </div>
   );
