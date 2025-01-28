@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import SideBar from "../components/Collections/SideBar";
 import { SideBardata } from "../data/Header";
@@ -15,11 +15,17 @@ const Collections: React.FC = () => {
   // Receiving the state
   console.log("productList", list);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-white">
       <div className="h-[60vh]  w-full mt-[]">
         <img
-          src={list.allProduct.mainImg}
+          src={
+            list.allProduct?.mainImg ||
+            "https://ik.imagekit.io/7phi74j9v/ShopImage/Slider1/Shortsmain.webp?updatedAt=1736870164046"
+          }
           alt=""
           className="h-full w-[100vw]"
         />
@@ -29,8 +35,8 @@ const Collections: React.FC = () => {
         <div className=" lg:flex lg:flex-col  hidden w-[20vw] sticky lg:top-[5vw]">
           <SideBar
             buttondata={SideBardata}
-            categarynames={list.categaryName}
-            noOfProduct={list.allProduct.numOfProduct}
+            categarynames={list.categaryName || "Man"}
+            noOfProduct={list.allProduct?.numOfProduct || 23}
           ></SideBar>
         </div>
 
