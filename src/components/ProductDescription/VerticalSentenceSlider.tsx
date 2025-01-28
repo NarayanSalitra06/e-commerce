@@ -68,38 +68,26 @@ const VerticalSentenceSlider: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
         {marqueeData.concat(marqueeData).map((item, index) => (
           <div
             key={index}
+            className="flex justify-between items-center text-[14px] font-bold font-inter cursor-pointer"
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between", // Ensures text and icon are on opposite sides
-              margin: 0,
-              fontSize: "16px",
               height: `${containerHeight}px`,
               lineHeight: `${containerHeight}px`,
               color: bgclr === "black" ? "white" : "black", // Dynamic text color
-              transition: "color 0.3s",
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLDivElement).style.color =
-                bgclr === "black" ? "white" : "black";
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLDivElement).style.color =
-                bgclr === "black" ? "white" : "black";
             }}
           >
-            <span style={{ flex: 1, textAlign: "start" }}>{item.text}</span> {/* Text starts on the left */}
+            <span className="flex-1 text-start">{item.text}</span>
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
+              className={`ml-2 flex items-center ${bgclr === "black" ? "text-white" : "text-black"}`}
               style={{
-                marginLeft: "8px",
-                color: bgclr === "black" ? "white" : "black", // Icon color matches text
-                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                height: "100%", // Ensures alignment with the container
               }}
             >
-              <FiExternalLink />
+              <FiExternalLink className="w-4 h-4" /> {/* Adjust icon size */}
             </a>
           </div>
         ))}

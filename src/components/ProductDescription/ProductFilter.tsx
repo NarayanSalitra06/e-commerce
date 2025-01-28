@@ -44,6 +44,11 @@ const ProductFilter: React.FC = () => {
           buttons={["Recommended", "Recently Viewed"]}
           style="grid grid-cols-2 gap-1  max-w-[25vw] cursor-pointer text-[12px] h-[35px] p-[3px] ml-2  font-semibold border-[1px] border-gray-600 rounded-[2vw]"
         />
+        <ToggleBtn
+          buttons={["Recommended", "Recently Viewed"]}
+          style="grid grid-cols-2 gap-1 w-full max-w-[300px] cursor-pointer text-sm h-[35px] p-1 ml-2 font-semibold border border-gray-600 rounded-full md:rounded-[2vw]"
+        />
+
         <ProductGrid />
       </div>
     </>
