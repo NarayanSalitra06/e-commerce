@@ -16,7 +16,7 @@ const ToggleBtn: React.FC<button> = ({ buttons, style }) => {
       <div className={`${style} `}>
         {buttons?.map((item: string, index: number) => (
           <div
-            className={`flex justify-center items-center rounded-[2vw] w-full  px-3 ${
+            className={`flex justify-center items-center rounded-[30px] w-full  px-1 ${
               bgIndex === index ? "bg-gray-300" : ""
             }`}
             onClick={() => {

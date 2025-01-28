@@ -82,19 +82,19 @@ const Banner: React.FC = () => {
                   <Button
                     text="Shop Women"
                     navigateTo="collections"
-                    buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                    buttonStyle="bg-white text-[#000000] text-[20px] font-semibold font-inter px-5 py-2"
                   />
                 ) : (
                   <>
                     <Button
                       text="Shop Women"
                       navigateTo="collections"
-                      buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                      buttonStyle="bg-white text-[#000000] text-[20px] font-semibold  font-inter px-4 py-2"
                     />
                     <Button
                       text="Shop Men"
                       navigateTo="collections"
-                      buttonStyle="bg-white text-[#000000] text-sm font-inter px-4 py-2"
+                      buttonStyle="bg-white text-[#000000] text-[20px]  font-semibold font-inter px-4 py-2"
                     />
                   </>
                 )}

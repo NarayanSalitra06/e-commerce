@@ -17,13 +17,13 @@ export const TabularHome: React.FC = () => {
         <Button
           text="Shop All"
           navigateTo="/shop-men"
-          buttonStyle="bg-[#000000] text-[#ffffff] text-sm font-inter px-4 py-2  hover:bg-gray-100"
+          buttonStyle="bg-[#000000] text-[#ffffff] text-sm font-bold font-inter px-4 py-2  hover:bg-gray-100"
         />
       </div>
 
       <ToggleBtn
         buttons={["Women", "Men"]}
-        style="inline-grid grid-cols-2 gap-2 cursor-pointer text-sm px-4 py-2 ml-2 font-semibold border border-gray-600 rounded-full"
+        style="grid grid-cols-2 gap-1 cursor-pointer  max-w-[200px] text-[12px]  h-[40px] p-[3px] m-2 font-bold border-[1px] border-gray-600  rounded-[30px] "
       />
     </div>
   );

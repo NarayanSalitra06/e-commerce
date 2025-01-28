@@ -29,8 +29,8 @@ const Home: React.FC = () => {
       <Heading
         upperText="Men's"
         lowerText="trending now"
-        upperStyle="text-[1.67vw] text-start mt-4 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
-        lowerStyle="text-[1.88vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
+        upperStyle="text-[3.25vw]  lg:text-[1.56vw] text-start mt-4 mr-0 mb-1 ml-2 font-inter font-bold text-[#0d0d0d]"
+        lowerStyle="text-[4.33vw]  lg:text-[1.56vw] uppercase mt-0 mr-0 mb-[-1.9vw] ml-2 text-start font-syncopate font-bold text-[#0d0d0d]"
       />
 
       <SwiperSlider datas={menAllproduct} />
