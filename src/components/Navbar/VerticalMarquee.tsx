@@ -57,19 +57,17 @@ const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ bgclr }) => {
       }}
     >
       <div
+        className="lg:mx-auto text-center lg:text-start w-full"
         ref={marqueeRef}
         style={{
-          display: "flex",
-          flexDirection: "column",
           position: "absolute",
         }}
       >
         {marqueeData.concat(marqueeData).map((item, index) => (
           <p
+            className="w-full lg:text-start text-center"
             key={index}
             style={{
-              margin: 0,
-              textAlign: "start",
               fontSize: "16px",
               height: `${containerHeight}px`,
               lineHeight: `${containerHeight}px`,

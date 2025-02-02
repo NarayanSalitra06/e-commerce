@@ -77,12 +77,12 @@ export default function BottomDrawer(props: Props) {
           textAlign: "center",
           zIndex: 100,
           borderRadius: 100,
-          padding: 0.2,
+          padding: 1,
         }}
       >
         <div className="flex justify-center items-center">
           <GiHamburgerMenu
-            className="text-2xl  rounded-md h-[6vh]  w-[15vw]"
+            className="text-2xl  rounded-md h-[4vh]  w-[10vw]"
             onClick={toggleDrawer(true)}
           />
         </div>

@@ -30,6 +30,7 @@ const Navbar: React.FC = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+
   const signinpage = location.pathname.includes("/signin");
   const signuppage = location.pathname.includes("/register");
 
@@ -143,11 +144,11 @@ const Navbar: React.FC = () => {
       <div
         className={`${
           hideHeader ? "hidden" : "block"
-        } flex sm:justify-between px-2 w-full justify-center items-center`}
+        } flex lg:justify-between px-2 w-full justify-center items-center`}
       >
         {!hideHeader && <VerticalMarquee bgclr={bgclr} />}
         <div
-          className="md:p-2 p-5 text-[0.8vw] font-bold hidden sm:block"
+          className="md:p-2 p-5 text-[0.8vw] font-bold hidden lg:block"
           onMouseLeave={() => setHelpToggle(false)}
         >
           {threeButtons.map((item, index) => (
@@ -186,7 +187,7 @@ const Navbar: React.FC = () => {
           >
             ALPHALETE
           </h1>
-          <div className="sm:flex sm:gap-3 hidden">
+          <div className="lg:flex sm:gap-3 hidden">
             <div onMouseEnter={handleMen} className="cursor-pointer">
               Men
             </div>
@@ -196,10 +197,13 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className="flex gap-5">
-          <BsFillPersonFill className="sm:hidden" />
+          <BsFillPersonFill
+            onClick={() => navigate("/signin")}
+            className="lg:hidden"
+          />
           <BiSearchAlt2 />
           <BiShoppingBag />
-          <RxHamburgerMenu className="sm:hidden" onClick={handleOnClickMenu} />
+          <RxHamburgerMenu className="lg:hidden" onClick={handleOnClickMenu} />
         </div>
       </div>
 
@@ -213,7 +217,7 @@ const Navbar: React.FC = () => {
         <div>
           <div className="bg-black absolute bg-opacity-40 top-0 left-0 right-0 bottom-0 z-[-1] h-[100vh]" />
           <div
-            className="md:hidden fixed bottom-0 left-0 rounded-t-lg top-[15vh] h-[100vh] w-full bg-white shadow-2xl z-50 transition-transform duration-300"
+            className="lg:hidden fixed bottom-0 left-0 rounded-t-lg top-[15vh] h-[100vh] w-full bg-white shadow-2xl z-50 transition-transform duration-300"
             style={{ transform: `translateY(${translateY}px)` }}
           >
             <div

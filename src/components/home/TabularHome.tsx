@@ -16,7 +16,7 @@ export const TabularHome: React.FC = () => {
 
         <Button
           text="Shop All"
-          navigateTo="/shop-men"
+          navigateTo="/collections"
           buttonStyle="bg-[#000000] text-[#ffffff] text-sm font-bold font-inter px-4 py-2  hover:bg-gray-100"
         />
       </div>
