@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";

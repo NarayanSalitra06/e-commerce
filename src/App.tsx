@@ -5,11 +5,12 @@ import Collections from "./pages/Collections";
 import ProductFilter from "./components/ProductDescription/ProductFilter";
 import SignInForm from "./components/Auth/SignInForm";
 import SignUpForm from "./components/Auth/SignUpForm";
+import ShoppingCart from "./components/common/AddToCart";
 
 function App() {
   return (
     <>
-      <Routes >
+      <Routes>
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
           <Route path="/collections" element={<Collections />} />
@@ -18,7 +19,7 @@ function App() {
           <Route path="/register" element={<SignUpForm />} />
         </Route>
 
-        
+        <Route path="/addtocart" element={<ShoppingCart />} />
       </Routes>
     </>
   );

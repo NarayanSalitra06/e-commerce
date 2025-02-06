@@ -7,6 +7,7 @@ import MobPopUp from "./MobPopUp";
 import VerticalMarquee from "./VerticalMarquee";
 import { categories, categories2 } from "../../data/Header";
 import { useLocation, useNavigate } from "react-router-dom";
+import ShoppingCart from "../common/AddToCart";
 
 interface HelpButton {
   name: string;
@@ -27,6 +28,7 @@ const Navbar: React.FC = () => {
   const [startY, setStartY] = useState(0);
   const [hideHeader, setHideHeader] = useState(false);
   const [bgclr, setBgclr] = useState("black");
+    const [shoppingCartOpen, setShoppingCartOpen] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -202,10 +204,22 @@ const Navbar: React.FC = () => {
             className="lg:hidden"
           />
           <BiSearchAlt2 />
-          <BiShoppingBag />
+          <BiShoppingBag
+            onClick={() => setShoppingCartOpen(true)}
+            className="cursor-pointer"
+          />
           <RxHamburgerMenu className="lg:hidden" onClick={handleOnClickMenu} />
         </div>
       </div>
+
+      {open && <PopUp categories={sendingData} />}
+      {handleMenu && <MobPopUp />}
+
+      {/* Shopping Cart Popup */}
+      <ShoppingCart
+        isOpen={shoppingCartOpen}
+        onClose={() => setShoppingCartOpen(false)}
+      />
 
       {open && (
         <div onMouseLeave={() => setOpen(false)}>
